@@ -1,0 +1,1 @@
+﻿package com.zgg.util{	import flash.display.Loader;		public class CustomLoader extends Loader	{		public var data:*;				public function CustomLoader():void		{			super();		}	}}
