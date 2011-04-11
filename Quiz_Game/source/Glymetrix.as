@@ -92,8 +92,8 @@
                         //}
                         // else {
                         //trace("not Loggedin!");
-						paramObj.username = "zerog";
-						paramObj.password = "746d4b622637292b26fc7a778dd744c8015ac008";
+						//paramObj.username = "zerog";
+						//paramObj.password = "746d4b622637292b26fc7a778dd744c8015ac008";
 						if (paramObj.username) {
 							service.login(new Array(paramObj.username, paramObj.password),
 								function(re:ResultEvent) { trace("Login Forced");
