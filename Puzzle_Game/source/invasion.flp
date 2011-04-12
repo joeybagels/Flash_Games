@@ -1,0 +1,37 @@
+﻿<flash_project name="invasion" version="1">
+    <project_folder name="common" expanded="true">
+        <project_file path="./com/zerog/Game.as" filetype="as" />
+        <project_file path="./com/zerog/Instructions.as" filetype="as" />
+        <project_file path="./com/zerog/InstructionsButton.as" filetype="as" />
+        <project_file path="./com/zerog/MainDevelopment.as" filetype="as" />
+        <project_file path="./com/zerog/MuteButton.as" filetype="as" />
+        <project_file path="./com/zerog/NewTimer.as" filetype="as" />
+        <project_file path="./com/zerog/Title.as" filetype="as" />
+        <project_file path="./com/zerog/ParticleFactory.as" filetype="as" />
+    </project_folder>
+    <project_folder name="invasion" expanded="true">
+        <project_file path="./com/zerog/invasion/Config.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/Game.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/Gem.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/GemBackground.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/Main.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/Message.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/ScorePopup.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/TimeDisplay.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/GameOverDialog.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/HeroAnimation.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/HighScoresDialog.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/HighScoreTestHarness.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/Score.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/BottomBar.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/OptionsMenu.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/SoundManager.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/Tutorial.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/HeroesPage.as" filetype="as" />
+        <project_file path="./com/zerog/invasion/InvasionTitle.as" filetype="as" />
+    </project_folder>
+    <project_file path="./invasion.fla" filetype="fla" profile="" def_file="true" />
+    <project_file path="./DevNotes.as" filetype="as" />
+    <project_file path="./invasion9.fla" filetype="fla" profile="" />
+    <project_file path="./invasion9b.fla" filetype="fla" profile="" />
+</flash_project>

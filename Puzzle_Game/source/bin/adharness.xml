@@ -1,0 +1,20 @@
+<adharness>
+	<ad>
+		<type>preroll</type>
+		<duration>3</duration>
+		<url>ad1.html</url>
+	</ad>
+	<ad>
+		<type>ingame</type>
+		<duration>3</duration>
+		<url>ad2.html</url>
+	</ad>
+	<ad>
+		<type>postroll</type>
+		<duration>3</duration>
+		<url>ad3.html</url>
+	</ad>
+	<game x="0" y="0">
+		<url>shs-puzzle.swf</url>
+	</game>
+</adharness>

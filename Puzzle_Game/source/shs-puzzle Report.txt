@@ -1,0 +1,818 @@
+shs-puzzle.swf Movie Report
+----------------------------
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    ----------------
+      1         240356         240356    Scene 1 (AS 3.0 Classes Export Frame)
+      2              1         240357    
+      3             14         240371    
+      4              1         240372    
+      5              1         240373    
+      6          66148         306521    
+      7          91007         397528    
+      8         751886        1149414    
+      9         104041        1253455    
+     10         180618        1434073    
+     11         995057        2429130    
+     12          32459        2461589    
+     13           4345        2465934    
+     14         108344        2574278    
+     15             33        2574311    
+     16          57160        2631471    
+     17             33        2631504    
+     18          70499        2702003    
+     19           1834        2703837    
+     20         137834        2841671    
+     21             45        2841716    
+     22          18895        2860611    
+     23             21        2860632    
+     24           9787        2870419    
+     25             17        2870436    
+     26          21298        2891734    
+     27             17        2891751    
+     28          26328        2918079    
+     29             17        2918096    
+     30           4481        2922577    
+     31              9        2922586    
+     32          10449        2933035    
+     33              9        2933044    
+     34          12280        2945324    
+     35              9        2945333    
+     36           8850        2954183    
+     37              9        2954192    
+     38           6565        2960757    
+     39              9        2960766    
+     40              1        2960767    
+     41              1        2960768    
+     42              1        2960769    
+     43              1        2960770    
+     44              1        2960771    
+     45              1        2960772    
+     46              1        2960773    
+     47              1        2960774    
+     48              1        2960775    
+     49              1        2960776    
+     50             18        2960794    
+     51              1        2960795    
+     52              1        2960796    
+     53             11        2960807    
+     54              1        2960808    
+     55              1        2960809    
+     56              1        2960810    
+     57              1        2960811    
+     58              1        2960812    
+     59              1        2960813    
+     60              1        2960814    
+     61              1        2960815    
+     62              1        2960816    
+
+Scene                        Shape Bytes    Text Bytes    ActionScript Bytes
+-------------------------    -----------    ----------    ------------------
+Scene 1                                0             0                     0
+
+Symbol                       Shape Bytes    Text Bytes    ActionScript Bytes
+-------------------------    -----------    ----------    ------------------
+Tween 3                                0             0                     0
+Tween 2                                0             0                     0
+hint_button_text                       0             0                     0
+hintButtonSymbol                       0             0                     0
+emptymc                                0             0                     0
+hide_help_checkbox_button             83             0                     0
+hide_help_checkbox_clip                0            57                     0
+level_rollup_back                      0             0                     0
+scoreMc                                0             0                     0
+green-off                              0             0                     0
+orange-off                             0             0                     0
+red-off                                0             0                     0
+beam-mothership_blastmark_graphic     63             0                     0
+beam-mothership_blastmark_graphic2   105             0                     0
+mothership_shipglow_graphic           57             0                     0
+motherShip_glow_clip                   0             0                     0
+red-50                                 0             0                     0
+lightblue-50                           0             0                     0
+blue-50                                0             0                     0
+purple-50                              0             0                     0
+pink-50                                0             0                     0
+green-50                               0             0                     0
+yellow-50                              0             0                     0
+orange-50                              0             0                     0
+red-25                                 0             0                     0
+lightblue-25                           0             0                     0
+blue-25                                0             0                     0
+purple-25                              0             0                     0
+pink-25                                0             0                     0
+green-25                               0             0                     0
+yellow-25                              0             0                     0
+orange-25                              0             0                     0
+laser-blast_graphic                    0             0                     0
+green-on_graphic                       0             0                     0
+orange-on_graphic                      0             0                     0
+red-on_graphic                         0             0                     0
+lit-light_graphic                      0             0                     0
+bar_light_pulse_anim1                  0             0                     0
+bar_light_pulse_anim3                  0             0                     0
+bar_light_pulse_anim4                  0             0                     0
+bar_light_pulse_anim2                  0             0                     0
+stone_light_pulse_anim1                0             0                     0
+bar_light_graphic                      0             0                     0
+bar_light_graphic2                     0             0                     0
+stone_light_graphic                    0             0                     0
+beam_charge_clip                       0             0                     0
+beam_charge_clip3                      0             0                     0
+beam_charge_clip2                      0             0                     0
+tutorial_dialog_arrow1                 0             0                     0
+tutorial_dialog_arrow1b                0             0                     0
+tutorial_text1_1                       0             0                     0
+tutorial_dialog_back_graphic           0             0                     0
+loadProgressBarGraphic                 0             0                     0
+loadProgress                           0             0                     0
+mothership_door_light1                68             0                     0
+mothership_door0                       0             0                     0
+light_patch                            0             0                     0
+light_patch_shoot_anim                 0             0                     0
+progress_light_red                     0             0                     0
+progress_light_yellow                  0             0                     0
+progress_light_green                   0             0                     0
+progress_light_green2                  0             0                     0
+mothership_light                       0             0                     0
+mothership_door_hatch2                 0             0                     0
+mothership_door_hatch                  0             0                     0
+mothership_graphic                     0             0                     0
+mothership_graphic2                    0             0                     0
+mothership_clip                        0             0                     0
+pup_flip                               0             0                     0
+pup_destroy                            0             0                     0
+blocker_flip                           0             0                     0
+blocker_destroy                        0             0                     0
+ship7_flip                             0             0                     0
+ship7_destroy                          0             0                     0
+ship6_flip                             0             0                     0
+ship6_destroy                          0             0                     0
+ship5_flip                             0             0                     0
+ship5_destroy                          0             0                     0
+ship4_flip                             0             0                     0
+ship4_destroy                          0             0                     0
+ship3_flip                             0             0                     0
+ship3_destroy                          0             0                     0
+ship2_flip                             0             0                     0
+ship2_destroy                          0             0                     0
+ship1_flip                             0             0                     0
+ship1_destroy                          0             0                     0
+ship0_flip                             0             0                     0
+ship0_destroy                          0             0                     0
+white_hex_clip                         0             0                     0
+white_hex-arrow_clip                   0             0                     0
+white_hex-arrow2_clip                  0             0                     0
+white_hex_anim                        55             0                     0
+white_hex-arrow_anim                  62             0                     0
+white_hex-arrow2_anim                 63             0                     0
+yellow_glow_anim                      87             0                     0
+yellow_glow_clip                       0             0                     0
+white_glow_anim                       87             0                     0
+white_glow_clip                        0             0                     0
+galac_head_meter                       0             0                     0
+doom_head_meter                        0             0                     0
+hulk_head_meter                        0             0                     0
+wolv_head_meter                        0             0                     0
+iron_head_meter                        0             0                     0
+thing_head_meter                       0             0                     0
+ss_head_meter                          0             0                     0
+thor_head_meter                        0             0                     0
+cap_head_meter                         0             0                     0
+heroes_meter_clip                      0             0                     0
+Symbol 89                              0             0                     0
+Symbol 88                              0             0                     0
+tractorBeam_clip                       0             0                     0
+IronMan                                0             0                     0
+gem_direction_loop_clip                0             0                     0
+gem_direction_button                   0             0                     0
+comboText                              0            56                     0
+messageLevelClear                      0           437                     0
+gemBackgroundComplete                 56             0                     0
+gemBackgroundNormal                   56             0                     0
+scorePopupText                         0            46                     0
+scoreText                              0            54                     0
+matchesText                            0            56                     0
+timeText                               0             0                     0
+levelText                              0            54                     0
+game                                   0           141                     0
+instructions                          37             0                     0
+title                                  0             0                     0
+buttonShape                           33             0                     0
+startButtonText                        0            54                     0
+startButton                            0             0                     0
+highScoresButtonText                   0             0                     0
+highScoresButton                       0             0                     0
+moreGamesButtonText                    0             0                     0
+moreGamesButton                        0             0                     0
+titleText                              0             0                     0
+instructionsTitleText                  0            66                     0
+instructionsTextText                   0           387                     0
+border                                 0             0                     0
+gameOverText                           0            61                     0
+message                                0           222                     0
+playAgainButtonText                    0            63                     0
+playAgainButton                        0             0                     0
+homeButtonText                         0            52                     0
+homeButton                            33             0                     0
+messagePlayAgain                       0             0                     0
+levelClearText                         0             0                     0
+levelMessageText                       0            54                     0
+messageLevel                           0            49                     0
+noMoreMovesText                        0            67                     0
+panelBackground                        0             0                     0
+panelText                              0             0                     0
+timeDisplay                            0             0                     0
+muteButton                           212             0                     0
+instructionsButton                   169             0                     0
+gemBackground                          0             0                     0
+scorePopup                             0            94                     0
+highlight                              0             0                     0
+gemOverClip                            0             0                     0
+emerge                                 0             0                     0
+gemRed                                 0             0                     0
+gemYellow                              0             0                     0
+gemGreen                               0             0                     0
+gemCyan                                0             0                     0
+gemViolet                              0             0                     0
+gemOrange                              0             0                     0
+gemBlue                                0             0                     0
+gemPurple                              0             0                     0
+invader_back_base_graphic              0             0                     0
+invader_light_base_graphic             0             0                     0
+gem_back_clip                          0             0                     0
+starburst                            271             0                     0
+radial1                                0             0                     0
+fallMotion                             0             0                     0
+star                                   0             0                     0
+star2                                  0             0                     0
+beam                                   0             0                     0
+capAm                                  0             0                     0
+CapAmericaShell                        0             0                     0
+Symbol 5                               0             0                     0
+Symbol 6                               0             0                     0
+Symbol 7                              38             0                     0
+Symbol 8                              36             0                     0
+Symbol 10                              0             0                     0
+Symbol 11                              0             0                     0
+Symbol 12                              0             0                     0
+Symbol 13                              0             0                     0
+Symbol 14                             84             0                     0
+Symbol 15                              0             0                     0
+Symbol 16                              0             0                     0
+Symbol 41                              0             0                     0
+Symbol 42                              0             0                     0
+Symbol 43                              0             0                     0
+Symbol 44                              0             0                     0
+Symbol 45                              0             0                     0
+Symbol 46                              0             0                     0
+Symbol 47                              0             0                     0
+stats                                  0           162                     0
+shipRedGraphic                         0             0                     0
+ship0_anim                             0             0                     0
+shipGoldGraphic                        0             0                     0
+ship1_anim                             0             0                     0
+shipPinkGraphic                        0             0                     0
+ship2_anim                             0             0                     0
+shipGreenGraphic                       0             0                     0
+ship3_anim                             0             0                     0
+shipYellowGraphic                      0             0                     0
+ship4_anim                             0             0                     0
+shipPurpleGraphic                      0             0                     0
+ship5_anim                             0             0                     0
+shipBlueGraphic                        0             0                     0
+ship6_anim                             0             0                     0
+shipLightBlueGraphic                   0             0                     0
+ship7_anim                             0             0                     0
+blockerGraphic                         0             0                     0
+shipBlock_anim                         0             0                     0
+pupBackGraphic                         0             0                     0
+shipPup_anim                           0             0                     0
+shipPup0Graphic                        0             0                     0
+shipPup0_anim                          0             0                     0
+shipPup1Graphic                        0             0                     0
+shipPup1_anim                          0             0                     0
+shipPup2Graphic                        0             0                     0
+shipPup2_anim                          0             0                     0
+shipPup3Graphic                        0             0                     0
+shipPup3_anim                          0             0                     0
+shipPup4Graphic                        0             0                     0
+shipPup4_anim                          0             0                     0
+shipPup5Graphic                        0             0                     0
+shipPup5_anim                          0             0                     0
+shipPup6Graphic                        0             0                     0
+shipPup6_anim                          0             0                     0
+shipPup7Graphic                        0             0                     0
+shipPup7_anim                          0             0                     0
+heads_clip                             0             0                     0
+gem                                    0             0                     0
+iron_man_arm_clip                      0             0                     0
+empty                                  0             0                     0
+CAL03                               2390             0                     0
+CAA03c                              1089             0                     0
+CAA03b                               961             0                     0
+CAh03 nech                           146             0                     0
+CA02b                               1301             0                     0
+CB01                                1307             0                     0
+CA01                                1478             0                     0
+CAb03                               1157             0                     0
+CH01                                2179             0                     0
+CAh03                               2124             0                     0
+CA03                                2274             0                     0
+CA02                                 633             0                     0
+shield                               278             0                     0
+Shield 1                             310             0                     0
+cap_anim1                              0             0                     0
+cap_anim1_fr2                       7494             0                     0
+cap_anim1_fr1                       7317             0                     0
+cape2                               1051             0                     0
+Tcape_03                            1409             0                     0
+TA02                                   0             0                     0
+TA01r                               3491             0                     0
+botton                               198             0                     0
+TL03                                2229             0                     0
+TB01                                 984             0                     0
+tb01a                                266             0                     0
+ta06                                1629             0                     0
+TA04                                1410             0                     0
+TL02a                                661             0                     0
+TL02b                               1135             0                     0
+TL02                                   0             0                     0
+TB02a                                591             0                     0
+TB03                                 602             0                     0
+TL01                                1207             0                     0
+TA05                                2061             0                     0
+TA03                                3120             0                     0
+TH01                                4766             0                     0
+TH02                                4108             0                     0
+TH03                                3992             0                     0
+TA01                                2054             0                     0
+thor_anim1                             0             0                     0
+thor_anim1_fr2                     12067             0                     0
+thor_anim1_fr1                     13972             0                     0
+TB03                                 602             0                     0
+Symbol 9                              56             0                     0
+TB03 lower                             0             0                     0
+TL03                                2229             0                     0
+TA03A                                  0             0                     0
+ta03 FORE                              0             0                     0
+tA02 hand                              0             0                     0
+head HiLine&LoFill                     0             0                     0
+thing                                  0             0                     0
+supa                                   0             0                     0
+Symbol 113                          1358             0                     0
+Symbol 114                           392             0                     0
+Symbol 115                          1606             0                     0
+Symbol 116                          1441             0                     0
+Symbol 117                           179             0                     0
+Symbol 118                           698             0                     0
+Symbol 119                          2258             0                     0
+Symbol 120                           146             0                     0
+Symbol 121                          1998             0                     0
+Symbol 122                           940             0                     0
+Symbol 123                          1063             0                     0
+Symbol 124                          1348             0                     0
+Symbol 125                          1904             0                     0
+Symbol 126                          2689             0                     0
+Symbol 127                           833             0                     0
+Symbol 128                           219             0                     0
+Symbol 129                           833             0                     0
+Symbol 130                           243             0                     0
+Symbol 131                          1205             0                     0
+Symbol 132                          1350             0                     0
+Symbol 133                           702             0                     0
+wolverine                           1726             0                     0
+wolverine_fr2                          0             0                     0
+wolverine_fr1                          0             0                     0
+WolverineShell                         0             0                     0
+Symbol 98                           1946             0                     0
+Symbol 99                           1343             0                     0
+Symbol 100                          3668             0                     0
+Symbol 101                          2297             0                     0
+Symbol 102                           617             0                     0
+Symbol 103                           260             0                     0
+Symbol 104                          2067             0                     0
+Symbol 105                          3506             0                     0
+Symbol 106                          3733             0                     0
+Symbol 107                           551             0                     0
+Symbol 108                           427             0                     0
+Symbol 109                           864             0                     0
+Symbol 110                          1156             0                     0
+Symbol 111                          1167             0                     0
+hulk                                   0             0                     0
+hulk_fr2                               0             0                     0
+hulk_fr1                               0             0                     0
+hulkShell                              0             0                     0
+Symbol 59                            351             0                     0
+Symbol 60                           1814             0                     0
+Symbol 61                            620             0                     0
+Symbol 62                            352             0                     0
+Symbol 63                           1025             0                     0
+Symbol 64                            274             0                     0
+Symbol 65                            317             0                     0
+Symbol 66                            447             0                     0
+Symbol 67                           1568             0                     0
+Symbol 68                             35             0                     0
+Symbol 69                            484             0                     0
+Symbol 70                            583             0                     0
+Symbol 71                            380             0                     0
+Symbol 72                            403             0                     0
+Symbol 73                           1943             0                     0
+Symbol 74                           1964             0                     0
+Symbol 75                            178             0                     0
+Symbol 76                            494             0                     0
+Symbol 77                           2001             0                     0
+Symbol 78                            298             0                     0
+Symbol 79                            286             0                     0
+Symbol 80                            390             0                     0
+Symbol 81                           2241             0                     0
+drDoom                                 0             0                     0
+drDoom_fr2                             0             0                     0
+drDoom_fr1                             0             0                     0
+DrDoomShell                            0             0                     0
+Symbol 21                            761             0                     0
+Symbol 22                           1960             0                     0
+Symbol 23                            576             0                     0
+Symbol 24                           2791             0                     0
+Symbol 25                           2047             0                     0
+Symbol 26                            946             0                     0
+Symbol 27                            190             0                     0
+Symbol 28                           2861             0                     0
+Symbol 29                            525             0                     0
+Symbol 30                            309             0                     0
+Symbol 31                            530             0                     0
+Symbol 32                              0             0                     0
+Symbol 33                            949             0                     0
+Symbol 34                            720             0                     0
+Symbol 35                           2181             0                     0
+Symbol 36                            556             0                     0
+galactus                               0             0                     0
+galactus_fr2                           0             0                     0
+galactus_fr1                           0             0                     0
+GalactusShell                          0             0                     0
+thor_burst_graphic                   126             0                     0
+Symbol 28                           2861             0                     0
+Symbol 29                            525             0                     0
+thing_wave                             0             0                     0
+thor_splat_graphic                   190             0                     0
+ss_blast_graphic                     193             0                     0
+Symbol 14                             84             0                     0
+Symbol 5SS                           518             0                     0
+Symbol 6SS                          1078             0                     0
+Symbol 7SS                           439             0                     0
+Symbol 8SS                           291             0                     0
+Symbol 9SS                           799             0                     0
+Symbol 10SS                          886             0                     0
+Symbol 11SS                          935             0                     0
+Symbol 12SS                            0             0                     0
+Symbol 13SS                          371             0                     0
+Symbol 14SS                          865             0                     0
+Symbol 15SS                         1428             0                     0
+Symbol 16SS                          589             0                     0
+Symbol 41SS                          305             0                     0
+Symbol 42SS                          799             0                     0
+Symbol 43SS                         1195             0                     0
+Symbol 44SS                         1111             0                     0
+Symbol 45SS                          987             0                     0
+Symbol 46SS                         1270             0                     0
+Symbol 47SS                          643             0                     0
+SilverSurferAnim                       0             0                     0
+SilverSurferAnim_fr2                   0             0                     0
+SilverSurferAnim_fr1               10061             0                     0
+Symbol 480                          2394             0                     0
+Symbol 481                           303             0                     0
+Symbol 482                           121             0                     0
+Symbol 483                           547             0                     0
+Symbol 484                           352             0                     0
+Symbol 485                           545             0                     0
+Symbol 486                           706             0                     0
+Symbol 487                          1237             0                     0
+Symbol 488                          2999             0                     0
+Symbol 489                          2390             0                     0
+Symbol 490                           216             0                     0
+Symbol 491                           823             0                     0
+Symbol 492                           805             0                     0
+Symbol 493                           573             0                     0
+Symbol 494                           951             0                     0
+Symbol 495                           896             0                     0
+Symbol 496                          1388             0                     0
+Symbol 497                           628             0                     0
+Symbol 498                           894             0                     0
+TheThing                               0             0                     0
+TheThing_fr2                           0             0                     0
+TheThing_fr1                           0             0                     0
+IL_01                               1744             0                     0
+Symbol 2                            1587             0                     0
+IB01 Abs                            1027             0                     0
+IB0110 Abs                           554             0                     0
+FINGER                               647             0                     0
+IA01                                2266             0                     0
+finger2                              306             0                     0
+IA11_botm                           1997             0                     0
+IA11_top                             532             0                     0
+leg11                               1332             0                     0
+IA 31a                              1136             0                     0
+blue tint                             81             0                     0
+Eyes Radial Gradient SIDE             74             0                     0
+IA12_botm                           2073             0                     0
+Symbol 1 iMan                       1627             0                     0
+il10                                3344             0                     0
+Symbol 1                               0             0                     0
+Chest Radial Gradient                146             0                     0
+ICh01                               1128             0                     0
+IH00 eye                             123             0                     0
+IH12                                1077             0                     0
+IH01                                1607             0                     0
+ICh12                               1095             0                     0
+Beam mask                             38             0                     0
+Radial Gradient                      274             0                     0
+bEAM TIP                               0             0                     0
+Beam1                                161             0                     0
+Beam3                                159             0                     0
+IronManShootUp                         0             0                     0
+IronManShootUp_fr1                     0             0                     0
+IA05_back arm                        946             0                     0
+IA 30b                              2408             0                     0
+IB05 abs                             218             0                     0
+IL30                                4503             0                     0
+IB05 chest                           429             0                     0
+IB 02 30min                         2189             0                     0
+IL05                                2399             0                     0
+IA 30                               4125             0                     0
+IH 30                               3008             0                     0
+IH05                                1379             0                     0
+Beam mask A                           38             0                     0
+Beam A                               108             0                     0
+IA05 front arm                      2318             0                     0
+Tween 1                                0             0                     0
+IronManShootRightUp                    0             0                     0
+Beam2                                161             0                     0
+IronManShootRightDown                  0             0                     0
+IH10                                1964             0                     0
+IronManShootDownAnim                   0             0                     0
+IronManShootLeftDown                   0             0                     0
+IronManShootLeftUpAnim                 0             0                     0
+IronManShootLeftUpAnim_fr2             0            58                     0
+hero_animation                         0             0                     0
+Symbol 3                              36             0                     0
+OK                                     0             0                     0
+Cancel                                 0             0                     0
+Sound_Off                              0             0                     0
+Music Off                              0             0                     0
+Sound_On                               0             0                     0
+Music On                               0             0                     0
+Reset stats                            0             0                     0
+Menu                                   0            47                     0
+gSparkle                               0             0                     0
+gCockpitBottom                        81             0                     0
+gOvalDoorOpen-75                      63             0                     0
+gOvalDoorOpen-50                      70             0                     0
+gOvalDoorOpen-25                      81             0                     0
+gSkrull                               44             0                     0
+skrull_look_anim                       0             0                     0
+HulkButton                             0             0                     0
+WolverineButton                        0             0                     0
+ThorButton                             0             0                     0
+CaptainAmericaButton                   0             0                     0
+IronManButton                          0             0                     0
+DrDoomButton                           0             0                     0
+ThingButton                            0             0                     0
+SilverSurferButton                     0             0                     0
+GalactusButton                         0             0                     0
+YellowClose                            0             0                     0
+Bios                                 126             0                     0
+Symbol 8                              36             0                     0
+HowToPlay                              0             0                     0
+Symbol 7                              38             0                     0
+OptionsButton                          0             0                     0
+Heroes                                 0             0                     0
+MoreGames                              0             0                     0
+Symbol 9                              56             0                     0
+Start                                  0             0                     0
+Deal                                   0             0                     0
+BottomBar                              0             0                     0
+BottomBarForTitle                      0             0                     0
+templateBG                             0             0                     0
+dialog_withPointer                   127             0                     0
+dialog_withPointerReverse            148             0                     0
+dialog                                88             0                     0
+nestDialog                             0             0                     0
+tutorial_text1                         0           644                     0
+textReveal                            51             0                     0
+arrowNext                            113            32                     0
+arrowPrevious                        218            32                     0
+tutorial                               0          4285                     0
+Credits                                0             0                     0
+Hint                                   0             0                     0
+CreditsPage                            0             0                     0
+HowToPlayScreen                        0             0                     0
+Symbol 12                              0             0                     0
+Symbol 11                              0             0                     0
+
+Font Name                 Bytes        Characters    
+----------------------    ---------    --------------
+Mighty Zeo 2.0                  242    x
+Times New Roman Bold           1531    LUefhopst
+Mighty Zeo Caps 2.0            9762     +./0123456789ABCDEFGHILMNOPRSTUVY\abcdefghijklmnoprstuvwy
+Mighty Zeo Caps 2.0 Bold       8688     !,.ABCDFGHIKLMNOPRSTWabcdefghijklmnopqrstuvwxyz’
+
+ActionScript Bytes    Location
+------------------    --------
+            168945    ActionScript 3.0 Classes
+
+Bitmap                     Compressed    Compression
+-----------------------    ----------  --------  -----------
+shs-logo-bw.png                36987      510692   JPEG Quality=90
+shs-logo.png                   34865      510692   JPEG Quality=90
+red-50.png                      1185        7280   JPEG Quality=90
+red-25.png                      1144        7400   JPEG Quality=90
+shipRed.png                     1595        9800   JPEG Quality=90
+skrull-head-40-wide.png         1885        7840   JPEG Quality=90
+sparkle.png                     1409        7568   Lossless
+orange-50.png                   1271        7280   JPEG Quality=90
+orange-25.png                   1353        7400   JPEG Quality=90
+shipGold.png                    1676        9800   JPEG Quality=90
+pink-50.png                     1270        7280   JPEG Quality=90
+pink-25.png                     1347        7400   JPEG Quality=90
+shipPink.png                    1703        9800   JPEG Quality=90
+green-50.png                    1248        7280   JPEG Quality=90
+green-25.png                    1297        7400   JPEG Quality=90
+shipGreen.png                   1668        9800   JPEG Quality=90
+yellow-50.png                   1275        7280   JPEG Quality=90
+yellow-25.png                   1407        7400   JPEG Quality=90
+shipYellow.png                  1776        9800   JPEG Quality=90
+purple-50.png                   1130        7280   JPEG Quality=90
+purple-25.png                   1219        7400   JPEG Quality=90
+shipPurple.png                  1556        9800   JPEG Quality=90
+blue-50.png                     1157        7280   JPEG Quality=90
+blue-25.png                     1141        7400   JPEG Quality=90
+shipBlue.png                    1570        9800   JPEG Quality=90
+lblue-50.png                    1262        7280   JPEG Quality=90
+lblue-25.png                    1406        7400   JPEG Quality=90
+shipLightBlue.png               1771        9800   JPEG Quality=90
+techPod_48Tall_20090213 copy.png      2997       13888   JPEG Quality=90
+base-pog.png                    1303        9568   JPEG Quality=90
+silversurfer-pog.png            1573        6720   JPEG Quality=90
+captain-america-pog.png         1958        8064   JPEG Quality=90
+thing-pog.png                   1792        6192   JPEG Quality=90
+ironman-pog.png                 1846        7600   JPEG Quality=90
+thor-pog.png                    2435        9072   JPEG Quality=90
+wolverine-pog.png               1644        7040   JPEG Quality=90
+hulk-pog.png                    1744        7600   JPEG Quality=90
+drdoom-pog.png                  1518        6724   JPEG Quality=90
+galactus-pog.png                2932       14112   JPEG Quality=90
+red-pog.png                     1516        9568   JPEG Quality=90
+orange-pog.png                  1556        9568   JPEG Quality=90
+pink-pog.png                    1572        9568   JPEG Quality=90
+green-pog.png                   1541        9568   JPEG Quality=90
+yellow-pog.png                  1591        9568   JPEG Quality=90
+purple-pog.png                  1469        9568   JPEG Quality=90
+dark-blue-pog.png               1506        9568   JPEG Quality=90
+light-blue-pog.png              1577        9568   JPEG Quality=90
+game-background.png            34106     1854400   JPEG Quality=90
+skrull-ship-door-closed.png     10891      323232   JPEG Quality=90
+door-open-01.png                3435       58028   JPEG Quality=90
+door-open-02.png               11766      254100   JPEG Quality=90
+door-open-03.png               12464      276080   JPEG Quality=90
+door-open-04.png               11719      294700   JPEG Quality=90
+skrull-invasion-logo.png       24992      154080   JPEG Quality=90
+shs-logo-ingame.png             3679       20984   JPEG Quality=90
+marvel-kids.png                 3916       15776   JPEG Quality=90
+zapper-base.png                11270      295152   JPEG Quality=90
+green-light.png                 1043        4864   JPEG Quality=90
+green-on.png                    2451        9856   JPEG Quality=90
+orange-light.png                 588        4864   Lossless
+orange-on.png                   2631        9856   JPEG Quality=90
+red-light.png                    964        4864   JPEG Quality=90
+red-on.png                      2440        9856   JPEG Quality=90
+crystal-lit.png                 4397       28832   JPEG Quality=90
+lit-light.png                   2020       11160   JPEG Quality=90
+laser-blast.png                 5760       55760   JPEG Quality=90
+head-halos-02-1.png            23482      296176   JPEG Quality=90
+silver-surfer.png               2436       11776   JPEG Quality=90
+captain-america.png             3013       13420   JPEG Quality=90
+thing.png                       2649       11328   JPEG Quality=90
+ironman.png                     2869       13260   JPEG Quality=90
+thor-head.png                   4352       21120   JPEG Quality=90
+wolverine.png                   2681       13664   JPEG Quality=90
+hulk.png                        3342       18096   JPEG Quality=90
+drdoom.png                      2792       14880   JPEG Quality=90
+galactus.png                    9887       72600   JPEG Quality=90
+border-bottom.png               5014      115520   JPEG Quality=90
+how-to-play-button-off.png      2944       17280   JPEG Quality=90
+how-to-play-button-on.png       2780       17280   JPEG Quality=90
+options-button-off.png          3202       18600   JPEG Quality=90
+options-button-on.png           2879       18600   JPEG Quality=90
+squadies-button-off-wtf.png      2879       17160   JPEG Quality=90
+squadies-button-on-wtf.png      2754       17160   JPEG Quality=90
+more-games-button-off.png       3499       18720   JPEG Quality=90
+more-games-button-on.png        3182       18720   JPEG Quality=90
+quit-button-off.png             4508       42688   JPEG Quality=90
+quit-button-on.png              4259       42688   JPEG Quality=90
+start-button.png                6869       43616   JPEG Quality=90
+start-button-on.png             6438       43616   JPEG Quality=90
+credit-button-off.png            537        2460   Lossless
+credits-button-on.png           1312        3420   JPEG Quality=90
+hint-off.png                    2436       19712   JPEG Quality=90
+hint-on.png                     2318       19712   JPEG Quality=90
+how-to-play-si.png             99571     1654128   JPEG Quality=80
+yellow_close-off.png            1179        5824   Lossless
+yellow_close-on.png             2934        9504   JPEG Quality=90
+title-screen.png              130402     1920000   JPEG Quality=85
+bio-background.png             10541     1741920   JPEG Quality=80
+hulk-thumb-off.png              3118       21760   JPEG Quality=90
+hulk-thumb-on.png               4138       21760   JPEG Quality=90
+wolverine-thumb-off.png         3368       22428   JPEG Quality=90
+wolverine-thumb-on.png          4260       22428   JPEG Quality=90
+thor-thumb-off.png              4220       28512   JPEG Quality=90
+thor-thumb-on.png               5620       28512   JPEG Quality=90
+captain-america-thumb-off.png      3819       21420   JPEG Quality=90
+captain-america-thumb-on.png      4662       21420   JPEG Quality=90
+ironman-thumb-off.png           2914       16800   JPEG Quality=90
+ironman-thumb-on.png            3656       16800   JPEG Quality=90
+drdoom-thumb-off.png            3424       23400   JPEG Quality=90
+drdoom-thumb-on.png             4581       23400   JPEG Quality=90
+thing-thumb-off.png             2609       10384   JPEG Quality=90
+thing-thumb-on.png              3574       13936   JPEG Quality=90
+silver-surfer-icon-thumb.png      2763       12848   JPEG Quality=90
+silver-surfer-icon-thumb-on.png      3570       16848   JPEG Quality=90
+galactus-thumb.png              4581       20672   JPEG Quality=90
+galactus-thumb-on.png           5643       25536   JPEG Quality=90
+squaddies-title.png            10065       62040   Lossless
+hulk-title.png                  3879       13244   JPEG Quality=90
+hulk-layout.png                88480     1854400   JPEG Quality=80
+w-layout.png                  106339     1854400   JPEG Quality=80
+thor-layout.png               105868     1854400   JPEG Quality=80
+captain-america-title.png       7051       39420   Lossless
+ca-layout.png                  70652     1854400   JPEG Quality=80
+iron-man.png                    6474       25024   JPEG Quality=90
+iron-man.png                   43488      404064   JPEG Quality=90
+im-layout.png                  99765     1854400   JPEG Quality=80
+dd-layout.png                  94337     1854400   JPEG Quality=80
+bio-title-thing.png             4355       15660   JPEG Quality=90
+thing-bio.png                  26618      342000   Lossless
+thing-pose.png                 46302      345280   JPEG Quality=90
+silver-surfer-title.png         6931       33264   Lossless
+silver-surfer-bio.png          30908      390144   Lossless
+silver-surfer-pose.png         46567      445816   JPEG Quality=90
+galactus-title.png              5147       23408   Lossless
+galactus-bio.png               35688      440064   Lossless
+galactus-pose.png              71877      591300   JPEG Quality=90
+cancel-off.png                   867        6552   Lossless
+cancel-on.png                   2930       10080   JPEG Quality=90
+credits-screen.png             74476     1662880   JPEG Quality=90
+skrull-options-header.png       3193       24084   Lossless
+dialog-back.png                 1879      402264   Lossless
+okay-off.png                     735        5304   Lossless
+okay-on.png                     2515        8640   JPEG Quality=90
+off-off.png                      588        3848   Lossless
+off-on.png                      2135        6768   JPEG Quality=90
+on-off.png                       502        3348   Lossless
+on-on.png                       1915        5904   JPEG Quality=90
+tutorial.png                    1070        8008   Lossless
+high-score2.png                 1352       10920   Lossless
+sound-label.png                  887        6588   Lossless
+divide-label.png                 300        2300   Lossless
+music-label.png                  904        6344   Lossless
+reset-high-score.png            1746       15704   Lossless
+reset-high-score-on.png         4565       23184   Lossless
+next-level.png                 18429      126260   JPEG Quality=90
+
+Event Sounds: 44KHz Mono 16 kbps MP3
+
+
+Sound name                 Bytes        Format    
+-----------------------    ---------    ----------
+tech_pod_destroyed.mp3       7457        11KHz Mono 16 kbps MP3
+sparkle_gem.mp3             10070        11KHz Mono 16 kbps MP3
+ships_fly_in.mp3            13988        11KHz Mono 16 kbps MP3
+ship_fly_in.mp3             11898        11KHz Mono 16 kbps MP3
+ship_fade_out.mp3            5080        11KHz Mono 16 kbps MP3
+ship_door_open.mp3           5629        11KHz Mono 16 kbps MP3
+silver_surfer.mp3           24385        11KHz Mono 16 kbps MP3
+ship_door_close.mp3          4531        11KHz Mono 16 kbps MP3
+wolverine.mp3               19735        11KHz Mono 16 kbps MP3
+select_ship.mp3              2095        44KHz Mono 64 kbps MP3
+thor.mp3                     9025        11KHz Mono 16 kbps MP3
+rollover.mp3                 4218        11KHz Mono 16 kbps MP3
+thing.mp3                   16339        11KHz Mono 16 kbps MP3
+music_title.wav            139583        44KHz Mono 64 kbps MP3
+ironman_shoot_up.mp3        17695        22KHz Mono 64 kbps MP3
+level_complete.mp3          18533        11KHz Mono 16 kbps MP3
+ironman_shoot_down.mp3      38282        11KHz Mono 16 kbps MP3
+incorrect_swap.mp3           2303        44KHz Mono 64 kbps MP3
+ironman_shoot_across_2.mp3  33319        11KHz Mono 16 kbps MP3
+energy_thermometer.mp3       5106        11KHz Mono 16 kbps MP3
+ironman_shoot_across_1.mp3  33319        11KHz Mono 16 kbps MP3
+energy_beam_down.mp3         9338        11KHz Mono 16 kbps MP3
+hulk.mp3                    27655        11KHz Mono 16 kbps MP3
+end_of_level_beam_shoot.mp3  12943        11KHz Mono 16 kbps MP3
+galactus.mp3                43611        11KHz Mono 16 kbps MP3
+click_tech_pod.mp3           2303        44KHz Mono 64 kbps MP3
+doctor_doom.mp3             26921        11KHz Mono 16 kbps MP3
+click_generic.mp3            3016        11KHz Mono 16 kbps MP3
+captain_america.mp3         18952        11KHz Mono 16 kbps MP3
+
+
+
+

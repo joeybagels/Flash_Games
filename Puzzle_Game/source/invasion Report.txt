@@ -1,0 +1,338 @@
+invasion.swf Movie Report
+--------------------------
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    ----------------
+      1        1305543        1305543    Scene 1
+      2             14        1305557    
+      3              1        1305558    
+      4           3529        1309087     (AS 3.0 Classes Export Frame)
+      5             72        1309159    
+      6             45        1309204    
+      7             21        1309225    
+      8             18        1309243    
+      9             30        1309273    
+     10             21        1309294    
+     11             18        1309312    
+     12             18        1309330    
+     13             18        1309348    
+     14              1        1309349    
+     15             37        1309386    
+     16              1        1309387    
+     17              1        1309388    
+     18              1        1309389    
+     19              1        1309390    
+     20              1        1309391    
+     21              1        1309392    
+     22              1        1309393    
+     23              1        1309394    
+     24              1        1309395    
+
+Scene                        Shape Bytes    Text Bytes    ActionScript Bytes
+-------------------------    -----------    ----------    ------------------
+Scene 1                                0            79                     0
+
+Symbol                       Shape Bytes    Text Bytes    ActionScript Bytes
+-------------------------    -----------    ----------    ------------------
+Symbol 89                              0             0                     0
+Symbol 88                              0             0                     0
+iron_man_arm_clip                      0             0                     0
+tractorBeam_clip                       0             0                     0
+IronMan                                0             0                     0
+gem_direction_loop_clip                0             0                     0
+gem_direction_button                   0             0                     0
+comboText                              0            56                     0
+messageLevelClear                      0            54                     0
+gemBackgroundComplete                 58             0                     0
+gemBackgroundNormal                   58             0                     0
+scorePopupText                         0            53                     0
+empty                                  0             0                     0
+scoreText                              0             0                     0
+matchesText                            0             0                     0
+timeText                               0             0                     0
+levelText                              0             0                     0
+game                                   0           144                     0
+instructions                          67             0                     0
+title                                  0             0                     0
+buttonShape                           34             0                     0
+startButtonText                        0            55                     0
+startButton                            0             0                     0
+highScoresButtonText                   0            65                     0
+highScoresButton                       0             0                     0
+moreGamesButtonText                    0             0                     0
+moreGamesButton                        0             0                     0
+titleText                              0             0                     0
+instructionsTitleText                  0            68                     0
+instructionsTextText                   0           417                     0
+border                                 0             0                     0
+gameOverText                           0            63                     0
+message                                0             0                     0
+hero_animation                        64            36                     0
+playAgainButtonText                    0            64                     0
+playAgainButton                        0             0                     0
+homeButtonText                         0            54                     0
+homeButton                            34             0                     0
+messagePlayAgain                       0             0                     0
+levelClearText                         0            65                     0
+levelMessageText                       0            55                     0
+messageLevel                           0            50                     0
+noMoreMovesText                        0            70                     0
+panelBackground                        0             0                     0
+panelText                              0             0                     0
+timeDisplay                            0             0                     0
+muteButton                           219             0                     0
+instructionsButton                   175             0                     0
+gemBackground                          0             0                     0
+scorePopup                             0            97                     0
+highlight                             85             0                     0
+gemOverClip                          273             0                     0
+emerge                                 0             0                     0
+supa                                7031             0                     0
+gemRed                                 0             0                     0
+gemYellow                              0             0                     0
+gemGreen                               0             0                     0
+gemCyan                                0             0                     0
+gemViolet                              0             0                     0
+gemOrange                              0             0                     0
+gemBlue                                0             0                     0
+gemPurple                              0             0                     0
+invader_back_base_graphic              0             0                     0
+invader_light_base_graphic             0             0                     0
+gem_back_clip                          0             0                     0
+gem                                    0             0                     0
+heads_clip                             0             0                     0
+starburst                            279             0                     0
+radial1                                0             0                     0
+fallMotion                             0             0                     0
+star                                   0             0                     0
+beam                                   0             0                     0
+Symbol 21                            784             0                     0
+Symbol 22                           2018             0                     0
+Symbol 23                            594             0                     0
+Symbol 24                           2875             0                     0
+Symbol 25                           2134             0                     0
+Symbol 26                            973             0                     0
+Symbol 27                            196             0                     0
+Symbol 28                           2892             0                     0
+Symbol 29                            486             0                     0
+Symbol 30                            319             0                     0
+Symbol 31                            544             0                     0
+Symbol 32                            354             0                     0
+Symbol 33                            979             0                     0
+Symbol 34                            746             0                     0
+Symbol 35                           2244             0                     0
+Symbol 36                            573             0                     0
+galactus                             359             0                     0
+GalactusShell                          0             0                     0
+TB03                                2535             0                     0
+Symbol 9                             125             0                     0
+TB03 lower                           237             0                     0
+TL03                                 904             0                     0
+TA03A                                947             0                     0
+ta03 FORE                            605             0                     0
+tA02 hand                           1025             0                     0
+head HiLine&LoFill                  3120             0                     0
+thing                                  0             0                     0
+CAL03                               2463             0                     0
+CAA03c                              1125             0                     0
+CAA03b                               991             0                     0
+CAh03 nech                           150             0                     0
+CA02b                               1339             0                     0
+CB01                                1344             0                     0
+CA01                                1523             0                     0
+CAb03                               1190             0                     0
+CH01                                2243             0                     0
+CAh03                               2188             0                     0
+CA03                                2343             0                     0
+CA02                                 655             0                     0
+shield                               286             0                     0
+Shield 1                             320             0                     0
+capAm                                  0             0                     0
+CapAmericaShell                        0             0                     0
+Symbol 113                          1396             0                     0
+Symbol 114                           404             0                     0
+Symbol 115                          1657             0                     0
+Symbol 116                          1483             0                     0
+Symbol 117                           184             0                     0
+Symbol 118                           720             0                     0
+Symbol 119                          2331             0                     0
+Symbol 120                           150             0                     0
+Symbol 121                          2059             0                     0
+Symbol 122                           968             0                     0
+Symbol 123                          1094             0                     0
+Symbol 124                          1393             0                     0
+Symbol 125                          1960             0                     0
+Symbol 126                          2757             0                     0
+Symbol 127                           858             0                     0
+Symbol 128                           226             0                     0
+Symbol 129                           858             0                     0
+Symbol 130                           249             0                     0
+Symbol 131                          1235             0                     0
+Symbol 132                          1383             0                     0
+Symbol 133                           723             0                     0
+wolverine                           1766             0                     0
+WolverineShell                         0             0                     0
+Symbol 98                           2007             0                     0
+Symbol 99                           1384             0                     0
+Symbol 100                          3780             0                     0
+Symbol 101                          2369             0                     0
+Symbol 102                           636             0                     0
+Symbol 103                           267             0                     0
+Symbol 104                          2130             0                     0
+Symbol 105                          3616             0                     0
+Symbol 106                          3849             0                     0
+Symbol 107                           568             0                     0
+Symbol 108                           440             0                     0
+Symbol 109                           895             0                     0
+Symbol 110                          1195             0                     0
+Symbol 111                          1203             0                     0
+hulk                                   0             0                     0
+hulkShell                              0             0                     0
+Symbol 59                            361             0                     0
+Symbol 60                           1883             0                     0
+Symbol 61                            639             0                     0
+Symbol 62                            363             0                     0
+Symbol 63                           1056             0                     0
+Symbol 64                            283             0                     0
+Symbol 65                            331             0                     0
+Symbol 66                            461             0                     0
+Symbol 67                           1627             0                     0
+Symbol 68                             36             0                     0
+Symbol 69                            498             0                     0
+Symbol 70                            600             0                     0
+Symbol 71                            391             0                     0
+Symbol 72                            418             0                     0
+Symbol 73                           2003             0                     0
+Symbol 74                           2018             0                     0
+Symbol 75                            183             0                     0
+Symbol 76                            507             0                     0
+Symbol 77                           2062             0                     0
+Symbol 78                            307             0                     0
+Symbol 79                            295             0                     0
+Symbol 80                            402             0                     0
+Symbol 81                           2312             0                     0
+drDoom                                 0             0                     0
+DrDoomShell                            0             0                     0
+Symbol 5                               0             0                     0
+Symbol 6                               0             0                     0
+Symbol 7                               0             0                     0
+Symbol 8                               0             0                     0
+Symbol 10                              0             0                     0
+Symbol 11                              0             0                     0
+Symbol 12                              0             0                     0
+Symbol 13                              0             0                     0
+Symbol 14                              0             0                     0
+Symbol 15                              0             0                     0
+Symbol 16                              0             0                     0
+Symbol 41                              0             0                     0
+Symbol 42                              0             0                     0
+Symbol 43                              0             0                     0
+Symbol 44                              0             0                     0
+Symbol 45                              0             0                     0
+Symbol 46                              0             0                     0
+Symbol 47                              0             0                     0
+Symbol 5SS                           535             0                     0
+Symbol 6SS                          1110             0                     0
+Symbol 7SS                           452             0                     0
+Symbol 8SS                           300             0                     0
+Symbol 9SS                           823             0                     0
+Symbol 10SS                          913             0                     0
+Symbol 11SS                          963             0                     0
+Symbol 12SS                            0             0                     0
+Symbol 13SS                          382             0                     0
+Symbol 14SS                          890             0                     0
+Symbol 15SS                         1469             0                     0
+Symbol 16SS                          609             0                     0
+Symbol 41SS                          314             0                     0
+Symbol 42SS                          830             0                     0
+Symbol 43SS                         1231             0                     0
+Symbol 44SS                         1149             0                     0
+Symbol 45SS                         1029             0                     0
+Symbol 46SS                         1304             0                     0
+Symbol 47SS                          663             0                     0
+SilverSurferAnim                       0             0                     0
+
+Font Name                 Bytes        Characters    
+----------------------    ---------    --------------
+Comic Sans MS Bold             7843     ./0123456789ADHMRSTY\abcdefghijklmnoprstuvwy
+Bell Gothic Std Black         11116     +.0123456789ACEGLMNORVabelmorsvx
+Arial Black                     590    HORT
+Comic Sans MS                  6323     %.0123456789ADEHILOPacegilmnorstuy
+
+ActionScript Bytes    Location
+------------------    --------
+             36477    ActionScript 3.0 Classes
+
+Bitmap                     Compressed    Compression
+-----------------------    ----------  --------  -----------
+TitleScreen02.jpg             137980     1920000   JPEG Quality=85
+MothershipBeam00000.png        28257     1920000   JPEG Quality=90
+MothershipBeam00001.png        28693     1920000   JPEG Quality=90
+MothershipBeam00002.png        28632     1920000   JPEG Quality=90
+MothershipBeam00003.png        29213     1920000   JPEG Quality=90
+MothershipBeam00004.png        28938     1920000   JPEG Quality=90
+MothershipBeam00005.png        29303     1920000   JPEG Quality=90
+MothershipBeam00006.png        30286     1920000   JPEG Quality=90
+MothershipBeam00007.png        30259     1920000   JPEG Quality=90
+MothershipBeam00008.png        29828     1920000   JPEG Quality=90
+MothershipBeam00009.png        29109     1920000   JPEG Quality=90
+MothershipBeam00010.png        29510     1920000   JPEG Quality=90
+MothershipBeam00011.png        29920     1920000   JPEG Quality=90
+MothershipBeam00012.png        29695     1920000   JPEG Quality=90
+MothershipBeam00013.png        29307     1920000   JPEG Quality=90
+MothershipBeam00014.png        28675     1920000   JPEG Quality=90
+MothershipBeam00015.png        28071     1920000   JPEG Quality=90
+MothershipBeam00016.png        28558     1920000   JPEG Quality=90
+MothershipBeam00017.png        30497     1920000   JPEG Quality=90
+MothershipBeam00018.png        31403     1920000   JPEG Quality=90
+MothershipBeam00019.png        30805     1920000   JPEG Quality=90
+MothershipBeam00020.png        30140     1920000   JPEG Quality=90
+MothershipBeam00021.png        29095     1920000   JPEG Quality=90
+MothershipBeam00022.png        29950     1920000   JPEG Quality=90
+MothershipBeam00023.png        29625     1920000   JPEG Quality=90
+GameScreenForZack20090217.png     63938     1824000   JPEG Quality=80
+Layer 1                         3104        9588   JPEG Quality=98
+Layer 8                         3399       10404   JPEG Quality=98
+Layer 5                         4619        8268   Lossless
+Layer 4                         3149        9600   JPEG Quality=98
+Layer 3                         2949        9116   JPEG Quality=98
+Layer 2                         3236       10400   JPEG Quality=98
+Layer 7                         2935        9720   JPEG Quality=98
+Layer 6                         3116        9996   JPEG Quality=98
+Galctus FPO                     1364        3344   JPEG Quality=98
+hud.png                        43605      626696   JPEG Quality=80
+MotherShip.png                 17327      497168   JPEG Quality=85
+shipRed.png                     2562        9216   JPEG Quality=98
+shipGold.png                    2585        9216   JPEG Quality=98
+shipPink.png                    2603        9216   JPEG Quality=98
+shipGreen.png                   2572        9216   JPEG Quality=98
+shipYellow.png                  2582        9216   JPEG Quality=98
+shipPurple.png                  2563        9216   JPEG Quality=98
+shipBlue.png                    2504        9216   JPEG Quality=98
+shipLightBlue.png               2557        9216   JPEG Quality=98
+techPod_48Tall_20090213 copy.png      3480       14400   JPEG Quality=98
+pogBgGrey.png                   2095       14400   JPEG Quality=98
+pogBgRed.png                    3071       14400   JPEG Quality=98
+pogBgOrange.png                 3016       14400   JPEG Quality=98
+pogBgPink.png                   3214       14400   JPEG Quality=98
+pogBgGreen.png                  2846       14400   JPEG Quality=98
+pogBgYellow.png                 2876       14400   JPEG Quality=98
+pogBgPurple.png                 2839       14400   JPEG Quality=98
+pogBgBlue.png                   3088       14400   JPEG Quality=98
+pogBgLightBlue.png              2860       14400   JPEG Quality=98
+
+Event Sounds: 11KHz Mono 16 kbps MP3
+
+
+Sound name                 Bytes        Format    
+-----------------------    ---------    ----------
+soundSwap                     743        11KHz Mono 16 kbps MP3
+soundLevelClear              4903        11KHz Mono 16 kbps MP3
+soundGroup                   2407        11KHz Mono 16 kbps MP3
+soundGameOver                6463        11KHz Mono 16 kbps MP3
+soundClick                    639        11KHz Mono 16 kbps MP3
+musicGame                    2511        11KHz Mono 16 kbps MP3
+
+
+
+

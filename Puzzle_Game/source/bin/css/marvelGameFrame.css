@@ -1,0 +1,53 @@
+body {
+	background-color: #000;
+	font-family: "Arial";
+	font-size: 12px;
+	line-height: 16px;
+	color: #006;
+	text-decoration: none;
+}
+
+.marvelHarness
+{
+	margin: 0px 0px 0px 0px;
+	border: 0px solid #A9A9A9;
+	display: inline;
+	width: 600px;
+	height: 350px;
+}
+.marvelGameAd
+{
+	background-color: #C03;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px 0px 0px 0px;
+	border: 0px solid #A9A9A9;
+	display: inline;
+	width: 600px;
+	height: 350px;
+	z-index: 200;
+}
+
+.marvelGame
+{
+	background-color: #30F;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	margin: 0px 0px 0px 0px;
+	border: 0px solid #A9A9A9;
+	display: inline;
+	width: 600px;
+	height: 350px;
+	z-index: 100;
+}
+
+.marvelGameAdFrame
+{
+	background-color: #C03;
+	display: inline;
+	width: 600px;
+	height: 350px;
+	border: 0px solid #A9A9A9;
+}
