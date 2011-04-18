@@ -309,95 +309,11 @@
 
                         var myQAnswers;
                         var myQ;
-                        trace("Q0: " + categories[i]['QuizQuestions'].length);
+                        
                                 for (var j = 0; j < categories[i]['QuizQuestions'].length; j++ ) {
-                                        /*if (categories[i]['QuizCategoryName'] == "Living Well" && j == 0) {
-                                                trace("Special case 1");
-                                        myQ = categories[i]['QuizQuestions'][j];
-                                                myQ.Content = "Do you snore?";
-                                                myQ.Score = 10;
-                                                myQAnswers = new Array("Yes", "No", "Don't Know");
-                                                myQ.QuizQuestionID = "Liberty1";
-                                        categories[i]['QuizQuestions'][j]['libertyQuestion'] = true;
-
-                                                for (var z = 0; z < myQAnswers.length; z++) {
-                                                        myQ.Choices[z].isAnswer = true;
-                                                        myQ.Choices[z].ChoiceID = "Liberty1-" + z;
-                                                        myQ.Choices[z].ChoiceSelection = z + 1;
-                                                        myQ.Choices[z].ChoiceContent = myQAnswers[z];
-                                                }
-
-                                        } else if (categories[i]['QuizCategoryName'] == "TV & Movies" && j == 3 )
-                                        {
-                                                trace("Special case 2");
-
-                                                myQ = categories[i]['QuizQuestions'][j];
-                                                 trace("SC4.1");
-
-                                                myQ.Content = "Actor Wilfred Brimely was born in:";
-                                                myQ.Score = 40;
-                                                 trace("SC4.2");
-
-                                                myQAnswers = new Array("Philadelphia, Pennsylvania", "Roanoke Colony, North Carolina", "Salt Lake City, Utah");
-                                                myQ.QuizQuestionID = "Liberty2";
-
-                                                trace("SC4.3");
-                                                                                        categories[i]['QuizQuestions'][j]['libertyQuestion'] = true;
-
-                                                for (var z = 0; z < myQAnswers.length; z++) {
-                                                        if (z == 2) myQ.Choices[z].isAnswer = true;
-                                                        else myQ.Choices[z].isAnswer = false;
-                                                        myQ.Choices[z].ChoiceID = "Liberty2-" + z;
-                                                        myQ.Choices[z].ChoiceSelection = z + 1;
-                                                        myQ.Choices[z].ChoiceContent = myQAnswers[z];
-                                                }
-                                        } else if (categories[i]['QuizCategoryName'] == "Living Well" && j ==  3) {
-                                                trace("Special case 3");
-
-                                                myQ = categories[i]['QuizQuestions'][j];
-                                                myQ.Content = "Sleep Apnea can make diabetes worse. How many people have diabetes and sleep apnea together?";
-                                                myQ.Score = 40;
-                                                myQAnswers = new Array("70%", "40%", "10%");
-                                                myQ.QuizQuestionID = "Liberty3";
-                                        categories[i]['QuizQuestions'][j]['libertyQuestion'] = true;
-
-                                                for (var z = 0; z < myQAnswers.length; z++) {
-                                                        if (z == 1) myQ.Choices[z].isAnswer = true;
-                                                        else myQ.Choices[z].isAnswer = false;
-                                                        myQ.Choices[z].ChoiceID = "Liberty3-" + z;
-                                                        myQ.Choices[z].ChoiceSelection = z + 1;
-                                                        myQ.Choices[z].ChoiceContent = myQAnswers[z];
-                                                }
-                                        } else if (categories[i]['QuizCategoryName'] == "Sports" && j ==  2)
-                                        {
-                                                trace("Special case 4");
-                                                 myQ = categories[i]['QuizQuestions'][j];
-                                                 trace("SC4.1");
-                                                myQ.Content = "Falling asleep at the wheel during a NASCAR race would be a symptom of:";
-                                                myQ.Score = 30;
-                                                 trace("SC4.2");
-
-                                                myQAnswers = new Array("Sleep Apnea", "Tourette's Syndrome", "Obsessive Compulsive Disorder");
-                                                myQ.QuizQuestionID = "Liberty4";
-                                                 trace("SC4.3");
-                                                categories[i]['QuizQuestions'][j]['libertyQuestion'] = true;
-
-                                                for (var z = 0; z < myQAnswers.length; z++) {
-                                                        if (z == 0) myQ.Choices[z].isAnswer = true;
-                                                        else myQ.Choices[z].isAnswer = false;
-                                                        myQ.Choices[z].ChoiceID = "Liberty4-" + z;
-                                                        myQ.Choices[z].ChoiceSelection = z + 1;
-                                                        myQ.Choices[z].ChoiceContent = myQAnswers[z];
-                                                }
-                                                 trace("SC4.4");
-
-
-                                } else  {*/
-                                                trace("Normal!");
-
+                        
                                         categories[i]['QuizQuestions'][j]['libertyQuestion'] = false;
-                                        //traceRecurse(categories[i]['QuizQuestions'][j]);
-                                //}
+                                   
                                         this.questions.push(categories[i]['QuizQuestions'][j]);
 
                                 }
@@ -408,8 +324,7 @@
                         beginGame();
                 }
 				function onHideImage(e) {
-					trace("HERE");
-
+					
 					Tweener.addTween(questionImage, { x:623,y:109, width:62, height:62, time:1, onComplete:onHideImageComplete} );
 				}
 				function onHideImageComplete() {
@@ -535,8 +450,8 @@ function showRewards(evt:MouseEvent) {
 
                 function loadImage(url) {
                   
-						loader.load(new URLRequest("http://www.google.com/images/logos/ps_logo2.png"));
-						//loader.load(new URLRequest(url));
+						//loader.load(new URLRequest("http://www.google.com/images/logos/ps_logo2.png"));
+						loader.load(new URLRequest(url));
                 }
 
                 function resizeImage(evt:Event) {
