@@ -1,0 +1,65 @@
+<%
+  url_base = "#{request.relative_url_root}/puzzle-game/"
+
+  flash_vars = @signon_params
+  if @player
+    flash_vars['login'] = 'skip'
+  else
+    flash_vars['login'] = 'prompt'
+  end
+  flash_vars['gameName'] = @game.name
+  flash_vars['gateway1'] = @gateway_url
+  flash_vars['termsUrl'] = @terms_url
+  flash_vars['gameZoneUrl'] = @game_zone_url
+  flash_vars['prizesUrl'] = @prizes_url
+  flash_vars = flash_vars.to_query
+%>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="<%= url_base %>AC_RunActiveContent.js" language="javascript"></script>
+</head>
+<script language="javascript">
+  if (AC_FL_RunContent == 0) {
+    alert("This page requires AC_RunActiveContent.js.");
+  } else {
+    AC_FL_RunContent(
+      'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',
+      'width', '760',
+      'height', '600',
+      'src', '<%= url_base %>CurseOfAnubis',
+      'base', '<%= url_base %>',
+      'quality', 'high',
+      'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+      'align', 'middle',
+      'play', 'true',
+      'loop', 'true',
+      'scale', 'showall',
+      'wmode', 'window',
+      'devicefont', 'false',
+      'id', 'Game',
+      'bgcolor', '#555555',
+      'name', 'Game',
+      'menu', 'true',
+      'allowFullScreen', 'false',
+      'allowScriptAccess','sameDomain',
+      'movie', '<%= url_base %>CurseOfAnubis',
+      'salign', '',
+      'flashVars', '<%= flash_vars %>'
+      ); //end AC code
+  }
+</script>
+<noscript>
+  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="760" height="600" id="Game" align="middle">
+  <param name="allowScriptAccess" value="sameDomain" />
+  <param name="flashVars" value="<%= flash_vars %>" />
+  <param name="allowFullScreen" value="false" />
+  <param name="movie" value="<%= url_base %>CurseOfAnubis.swf" />
+  <param name="base" value="<%= url_base %>" />
+  <param name="quality" value="high" />
+  <param name="bgcolor" value="#555555" />
+  <embed src="<%= url_base %>CurseOfAnubis.swf" base="<%= url_base %>" FlashVars="<%= flash_vars %>" quality="high" bgcolor="#555555" width="100%" height="100%" name="Game" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+  </object>
+</noscript>
+</body>
+</html>
