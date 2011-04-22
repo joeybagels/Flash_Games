@@ -515,6 +515,9 @@ package com.marvel.superherosquad.solitaire
 
 				if (win) {
 					gameOverFlag = true;
+					
+					endGame();
+					
 				//if (true) {
 					//this.tracker.trackEvent(MARVEL_SUPERHERO_SQUAD_SOLITAIRE_NAME, getGameString(), "complete", this.timer.currentCount);
 					
@@ -594,7 +597,8 @@ package com.marvel.superherosquad.solitaire
 						TweenLite.delayedCall(i * Math.random() * .5, createFireworks, new Array(randX, randY));
 					}
 					
-					TweenLite.delayedCall(10, endGame);
+					//TweenLite.delayedCall(10, endGame);
+					
 				}
 			}
 			
@@ -3920,7 +3924,7 @@ package com.marvel.superherosquad.solitaire
 		
 		private function onStartGame(e:MouseEvent):void {
 			
-			this.server.newGame("Trivia Challenge");
+			this.server.newGame();
 		}
 				
 		private function onNewGame(e:Event):void {

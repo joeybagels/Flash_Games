@@ -189,7 +189,7 @@ package com.marvel.superherosquad.solitaire
 			dispatchEvent(new Event(RECEIVED_QUESTION));	
 		}
 		
-		public function newGame(gameId:String):void {
+		public function newGame():void {
 			//var gameName:String =
 			
 			this.myService.new_game(new Array(this.gn), onNewGame, onFail);
