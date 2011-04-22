@@ -27,7 +27,7 @@
 				var gameName = "Trivia Challenge";
                 var soundFolder = "http://174.129.22.44/data/";
 				var gateway:String = "http://www.glymetrix.com/amfphp/gateway.php";
-                var rubyGateway:String = "http://174.129.22.44/rubyamf_gateway";
+                var rubyGateway:String = "http://50.17.251.132/rubyamf_gateway";
                 var currentQuestion:Object = {points: 0, correct_answer: -1, qIconId: -1, qSound: new Sound(), a1Sound: new Sound(), a2Sound: new Sound(), a3Sound: new Sound(), qSoundChannel: null, correct: false};
                 var qiWidth = 136.5;
                 var qiHeight = 96.33;
@@ -92,8 +92,8 @@
                         //}
                         // else {
                         //trace("not Loggedin!");
-						//paramObj.username = "zerog";
-						//paramObj.password = "746d4b622637292b26fc7a778dd744c8015ac008";
+						paramObj.username = "zerog";
+						paramObj.password = "746d4b622637292b26fc7a778dd744c8015ac008";
 						if (paramObj.username) {
 							service.login(new Array(paramObj.username, paramObj.password),
 								function(re:ResultEvent) { trace("Login Forced");
@@ -611,15 +611,27 @@ function showRewards(evt:MouseEvent) {
                 function answer2(e:MouseEvent) {
 
                         answerQuestion(2);
-                        var channel = currentQuestion.a2Sound.play();
-                        channel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
+						
+						try {
+                       	 var channel = currentQuestion.a2Sound.play();
+						 channel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
+						}
+						catch(e:Error) {
+							answerComplete(null);
+						}
+                        
                 }
 
                 function answer3(e:MouseEvent) {
 
                         answerQuestion(3);
-                        var channel = currentQuestion.a3Sound.play();
-                        channel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
+						try {
+                       	 var channel = currentQuestion.a3Sound.play();
+						 channel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
+						}
+						catch(e:Error) {
+							answerComplete(null);
+						}
                 }
 
                 function answerQuestion(answerNum) {
