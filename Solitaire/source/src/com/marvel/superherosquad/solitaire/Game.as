@@ -198,7 +198,7 @@ package com.marvel.superherosquad.solitaire
 		
 		private var lastBonusCardClicked:IBonusCard;
 		
-		public function Game()
+		public function Game(assetsUrl:String)
 		{
 			super(this.bg);
 
@@ -231,7 +231,7 @@ package com.marvel.superherosquad.solitaire
 			addEventListener(ACE_PILE_TO_KLONDIKE_PILE, onAceToKlondikePileAdded);
 			
 			//load external assets
-			var l:DisplayLoadStream = new DisplayLoadStream("Assets.swf");
+			var l:DisplayLoadStream = new DisplayLoadStream(assetsUrl);
 			l.addEventListener(StreamEvent.COMPLETE, onComplete);
 			
 			this.preloadDialog = new LoadingDisplay();

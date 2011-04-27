@@ -61,7 +61,7 @@ package com.marvel.superherosquad.solitaire
 					
 			//Hides Preloader
 			var mainClass:Class = getDefinitionByName("com.marvel.superherosquad.solitaire.Game") as Class;
-			var game:DisplayObject = new mainClass() as DisplayObject;
+			var game:DisplayObject = new mainClass(this.root.loaderInfo.parameters.brand) as DisplayObject;
 	
 			addChild(game);
 			
