@@ -1,5 +1,5 @@
 <%
-  url_base = "#{request.relative_url_root}/puzzle-game/"
+  url_base = "#{request.relative_url_root}/puzzle-game/core/"
 
   flash_vars = @signon_params
   if @player
@@ -9,9 +9,10 @@
   end
   flash_vars['gameName'] = @game.name
   flash_vars['gateway1'] = @gateway_url
-  flash_vars['termsUrl'] = @terms_url
-  flash_vars['gameZoneUrl'] = @game_zone_url
-  flash_vars['prizesUrl'] = @prizes_url
+  flash_vars['termsUrl'] = @game.terms_url
+  flash_vars['gameZoneUrl'] = @game.game_zone_url
+  flash_vars['prizesUrl'] = @game.prizes_url
+  flash_vars['brand'] = @game.brand_url unless @game.brand_url.blank?
   flash_vars = flash_vars.to_query
 %>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
