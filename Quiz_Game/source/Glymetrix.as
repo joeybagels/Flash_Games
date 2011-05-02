@@ -465,6 +465,8 @@ function showRewards(evt:MouseEvent) {
 					questionImage.addChild(loader);
 					loader.mask = questionImage.imageMask;
 					questionImage.addChild(questionImage.hideButton);
+					//questionImage.addChild(questionImage.text_bg);
+					questionImage.addChild(questionImage.question_txt);
 					trace("RESIZE IMAGE");
                        
                         var targ = evt.currentTarget.content;
