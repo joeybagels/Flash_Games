@@ -105,6 +105,8 @@
 								function(re:ResultEvent) {
 									Glymetrix.myUsername = re.result.UserName }, onFault);
 						}
+						
+						
                 }
                 function onSuccess(re:ResultEvent):void
                 {
@@ -149,6 +151,7 @@
                 }
 
                 function begin(e:Event):void {
+					trace("BEGIN()");
                         var params = "nothin";
                         service.new_game(new Array(gameName),
                                 function(re) {
@@ -287,6 +290,10 @@
                 }
                 */
                 function handleQuizData(re:ResultEvent) {
+					trace("handle quiz data");
+					trace(categories.length);
+					
+					trace(re.result.QuizCategories);
                         if (categories.length != 0 ) return;
                         if (re.result.QuizCategories == undefined || re.result.QuizCategories == null) {
                                 return;
@@ -322,6 +329,8 @@
                         trace("HQD3" + categories.length + "," + questions.length);
 
                         beginGame();
+						//gotoAndStop("win");
+						
                 }
 				function onHideImage(e) {
 					
@@ -623,7 +632,10 @@ function showRewards(evt:MouseEvent) {
 						}
                         
                 }
-
+function restart(e) {
+categories = new Array();
+begin(null);
+}
                 function answer3(e:MouseEvent) {
 
                         answerQuestion(3);
@@ -818,6 +830,7 @@ function showRewards(evt:MouseEvent) {
 
                 }
                 function cleanScreen(opt):void {// True to hide them, false to view them
+				
                         for (var i = 0; i < QuestionIcon.icons.length; i++) {
                                 QuestionIcon.icons[i].visible = !opt;
                                 //trace("Howdy: " + currentQuestion);
