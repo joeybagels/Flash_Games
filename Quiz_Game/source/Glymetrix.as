@@ -12,10 +12,11 @@
         import caurina.transitions.*;
         import org.rubyamf.remoting.ssr.*;
         import flash.utils.*;
-
-
+		import com.glymetrix.data.*;
+		import com.glymetrix.modules.survey.SurveyDialog;
+		
         public class Glymetrix extends MovieClip {
-
+var surveyDialog:SurveyDialog;
                 public static var firstQuestion = true;
                 var playSessionID;
                 var sessionActivityID;
@@ -27,7 +28,7 @@
 				var gameName = "Trivia Challenge";
                 var soundFolder = "http://174.129.22.44/data/";
 				var gateway:String = "http://www.glymetrix.com/amfphp/gateway.php";
-                var rubyGateway:String = "http://50.17.251.132/rubyamf_gateway";
+                var rubyGateway:String = "http://ec2-50-17-251-132.compute-1.amazonaws.com/rubyamf_gateway";//"http://50.17.251.132/rubyamf_gateway";
                 var currentQuestion:Object = {points: 0, correct_answer: -1, qIconId: -1, qSound: new Sound(), a1Sound: new Sound(), a2Sound: new Sound(), a3Sound: new Sound(), qSoundChannel: null, correct: false};
                 var qiWidth = 136.5;
                 var qiHeight = 96.33;
@@ -59,6 +60,8 @@
 				var questionImage:QuestionImage;
 				
                 function Glymetrix():void {
+					
+		
 					questionImage = new QuestionImage();
 
 					questionImage.hideButton.addEventListener(MouseEvent.CLICK, onHideImage);
@@ -70,8 +73,8 @@
                         //function tellme(e) { if (startHelp_mc) trace(startHelp_mc.x); }
                         var paramObj:Object = LoaderInfo(this.root.loaderInfo).parameters;
 						
-						if (paramObj.rubyGateway)
-							rubyGateway = paramObj.rubyGateway;
+						if (paramObj.gateway1)
+							rubyGateway = paramObj.gateway1;
 						if (paramObj.data)
 							soundFolder = paramObj.data;
 						if (paramObj.gameName)
@@ -108,6 +111,10 @@
 						
 						
                 }
+				
+				function onAnswerBonusQuestion(e:Event):void {
+					trace("answer bonus");
+				}
                 function onSuccess(re:ResultEvent):void
                 {
                         trace("Success!" + re.result);
@@ -213,8 +220,8 @@
 
                         //connection.call("Glymetrix.addGlucose", null, params);
                         //traceRecurse(healthRecords);
-                        service.collect_glucose(new Array( { RecordInputDate:new Date().toUTCString(), RecordProvider:"Trivia Challenge", HealthRecordItemDetails:healthRecords }, myUsername), onSuccess, onFault);
-                        traceRecurse(new Array( { RecordInputDate:new Date().toUTCString(), RecordProvider:"Trivia Challenge", HealthRecordItemDetails:healthRecords }, myUsername));
+                        service.collect_glucose(new Array( { RecordInputDate:new Date().toUTCString(), RecordProvider:gameName, HealthRecordItemDetails:healthRecords }, myUsername), onSuccess, onFault);
+                        traceRecurse(new Array( { RecordInputDate:new Date().toUTCString(), RecordProvider:gameName, HealthRecordItemDetails:healthRecords }, myUsername));
                         trace("SCG!");
                         enteredGlucose = true;
                         doublePoints();
@@ -336,6 +343,31 @@
 					
 					Tweener.addTween(questionImage, { x:623,y:109, width:62, height:62, time:1, onComplete:onHideImageComplete} );
 				}
+				
+				function loadSurvey() {
+					if (this.surveyDialog == null) {
+						this.surveyDialog = new SurveyDialog();
+						trace("ON GET BONUS QUESTION " + this);
+						this.surveyDialog.setParent(this);
+						this.surveyDialog.setService(this.service)
+						this.surveyDialog.addEventListener(SurveyDialog.ANSWER, onAnswerBonusQuestion);
+						this.surveyDialog.addEventListener(SurveyDialog.SURVEY_COMPLETE, onSurveyComplete);
+						
+					}
+					
+					this.surveyDialog.setSessionId(this.playSessionID);
+					this.surveyDialog.loadQuestion();
+					
+					
+				}
+				
+private function onSurveyComplete(e:Event):void {
+	                                myPoints += 500;
+                                myPoints_txt.text = String(myPoints);
+                                trace("Right!" + currentQuestion.points + "," + myPoints + "," + myPoints_txt.text);
+                                chingSound.play();
+}
+				
 				function onHideImageComplete() {
 					questionImage.buttonMode = true;
 					questionImage.addEventListener(MouseEvent.CLICK, onClickSmallImage);
