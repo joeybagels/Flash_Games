@@ -131,7 +131,7 @@
 			this.service.choose_answer_bonus_question_activity(new Array(playSessionID, "Survey"), onGetBonusQuestion, onFail);
 			}
 			else {
-				this.showDialog();
+				this.showDialog(0,0);
 				this.showError();
 			}
 		}
@@ -253,7 +253,7 @@ trace("Questio cat " + questionCategory);
 			trace("set quest");
 					showLoading(true);
 					trace("show loading");
-					showDialog();
+					showDialog(0,0);
 			trace("question "+this.q);
 			trace(this.q.getAnswers());
 					var answers:Array = q.getAnswers();
