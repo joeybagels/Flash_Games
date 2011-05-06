@@ -2,7 +2,12 @@
 <%
   url_base = "#{request.relative_url_root}/quiz-game/core/"
   movie = url_base + 'quizgame.swf'
-  flash_vars = {}
+  flash_vars = @signon_params
+  if @player
+    flash_vars['login'] = 'skip'
+  else
+    flash_vars['login'] = 'prompt'
+  end
   flash_vars['rubyGateway'] = @gateway_url
   flash_vars['data'] = "#{request.relative_url_root}/data/"
   flash_vars['gameName'] = @game.name
@@ -13,19 +18,19 @@
   <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript" src="<%= url_base %>swfobject.js"></script>
     <script type="text/javascript">
     if (!swfobject.hasFlashPlayerVersion("9.0.18")) {
   if (confirm("Your Flash Player is out of date. Press Ok to update your flash player, or cancel to attempt to play anyway.")) { 
   window.location="http://www.adobe.com/go/getflashplayer";
 }
 } 
-      swfobject.registerObject("myFlashContent", "9.0.0");
+      swfobject.registerObject("flashGame", "9.0.0", "expressInstall.swf");
     </script>
   </head>
   <body >
     <div>
-      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600" id="myFlashContent">
+      <object id="flashGame" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600">
         <param name="movie" value="<%= movie %>" />
         <param name="base" value="<%= url_base %>" />
         <param name="flashvars" value="<%= flash_vars %>" />
