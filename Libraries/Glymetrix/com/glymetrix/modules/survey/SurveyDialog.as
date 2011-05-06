@@ -183,11 +183,9 @@
 				onAnswerSoundComplete(null);
 			}
 			
-			trace("here after catch");
 			
-			trace(this.answers[i]);
-			trace(this.start);
-			trace(getQuestion());
+			//decrement to 0 based
+			i--;
 			
 			if (this.answers[i] == undefined) {
 				onSubmitAnswer();
