@@ -96,16 +96,23 @@ var surveyDialog:SurveyDialog;
                         // else {
                         //trace("not Loggedin!");
 						
-						
-						//if password is not set
-						if (!paramObj.password) {
+						/*
+						//if user and hash is not set
+						if (!paramObj.hash && !paramObj.username) {
 							paramObj.username = "zerog";
-							paramObj.password = "746d4b622637292b26fc7a778dd744c8015ac008";
+							paramObj.hash = "746d4b622637292b26fc7a778dd744c8015ac008";
 						}
+							*/
 							
-							
-						if (paramObj.username) {
-							service.login(new Array(paramObj.username, paramObj.password),
+						
+						if (!paramObj.username && !paramObj.hash) {
+							service.login(new Array("zerog", "746d4b622637292b26fc7a778dd744c8015ac008"),
+								function(re:ResultEvent) { trace("Login Forced");
+									Glymetrix.myUsername = re.result.UserName;
+									trace(Glymetrix.myUsername)}, onFault);
+						}
+						else if (paramObj.username && paramObj.hash) {
+							service.login(new Array(paramObj.username, paramObj.hash),
 								function(re:ResultEvent) { trace("Login Forced");
 									Glymetrix.myUsername = re.result.UserName;
 									trace(Glymetrix.myUsername)}, onFault);
