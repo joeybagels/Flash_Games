@@ -105,13 +105,13 @@ var surveyDialog:SurveyDialog;
 							*/
 							
 						
-						if (!paramObj.username && !paramObj.hash) {
+						if (paramObj.username == undefined && paramObj.hash == undefined) {
 							service.login(new Array("zerog", "746d4b622637292b26fc7a778dd744c8015ac008"),
 								function(re:ResultEvent) { trace("Login Forced");
 									Glymetrix.myUsername = re.result.UserName;
 									trace(Glymetrix.myUsername)}, onFault);
 						}
-						else if (paramObj.username && paramObj.hash) {
+						else if (paramObj.username != undefined && paramObj.hash != undefined) {
 							service.login(new Array(paramObj.username, paramObj.hash),
 								function(re:ResultEvent) { trace("Login Forced");
 									Glymetrix.myUsername = re.result.UserName;
