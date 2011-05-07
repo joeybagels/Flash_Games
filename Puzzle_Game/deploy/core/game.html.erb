@@ -3,11 +3,6 @@
   url_base = "#{request.relative_url_root}/puzzle-game/core/"
   movie = url_base + 'CurseOfAnubis.swf'
   flash_vars = @signon_params
-  if @player
-    flash_vars['login'] = 'skip'
-  else
-    flash_vars['login'] = 'prompt'
-  end
   flash_vars['gameName'] = @game.name
   flash_vars['gateway1'] = @gateway_url
   flash_vars.merge! @game.brandings
@@ -29,13 +24,13 @@
   </head>
   <body >
     <div>
-      <object id="flashGame" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="760" height="600">
+      <object id="flashGame" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="600" align="middle">
         <param name="movie" value="<%= movie %>" />
         <param name="base" value="<%= url_base %>" />
         <param name="flashvars" value="<%= flash_vars %>" />
         <param name="allowScriptAccess" value="sameDomain" />
         <!--[if !IE]>-->
-        <object type="application/x-shockwave-flash" data="<%= movie %>" width="760" height="600">
+        <object type="application/x-shockwave-flash" data="<%= movie %>" width="800" height="600" align="middle">
           <param name="base" value="<%= url_base %>" />
           <param name="flashvars" value="<%= flash_vars %>" />
         <!--<![endif]-->
