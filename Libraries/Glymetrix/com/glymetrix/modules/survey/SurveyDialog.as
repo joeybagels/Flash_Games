@@ -1,26 +1,19 @@
 ﻿package com.glymetrix.modules.survey
 {
+	import com.glymetrix.data.*;
 	import com.zerog.components.dialogs.AbstractDialog;
 	import com.zerog.events.AbstractDataEvent;
 	
 	import flash.display.MovieClip;
-	import flash.events.MouseEvent;
-	import flash.text.TextField;
-	import flash.net.*;
-	import flash.display.DisplayObjectContainer;
-	import flash.display.MovieClip;
-	import flash.utils.getQualifiedClassName;
 	import flash.events.Event;
-	
-	import com.zerog.components.dialogs.AbstractDialog;
-	import com.zerog.events.DialogEvent;
-	import com.glymetrix.data.*;
+	import flash.events.IOErrorEvent;
+	import flash.events.MouseEvent;
 	import flash.media.Sound;
 	import flash.media.SoundChannel;
-	import flash.events.IOErrorEvent;
-
- import org.rubyamf.remoting.ssr.*;
- import flash.errors.IOError;
+	import flash.net.*;
+	import flash.text.TextField;
+	
+	import org.rubyamf.remoting.ssr.*;
 
 
 
@@ -31,7 +24,7 @@
 		public var countText:TextField;
 		private var service:RemotingService;
 		public static const ANSWER:String = "answer";
-		public static const SURVEY_COMPLETE = "survey complete";
+		public static const SURVEY_COMPLETE:String = "survey complete";
 		private static const SOUNDS_URL:String = "http://174.129.22.44/data/";
 		public var question:TextField;
 		public var category:TextField;
@@ -50,10 +43,15 @@
 		private var start:Date;
 		private var playSessionID:int;
 		private var playSessionIDSubmit:int;
-		
+		public var dismissButton:MovieClip;
 		public function SurveyDialog() {
 			super();
 			this.errorDialog.visible = false;
+			this.dismissButton.addEventListener(MouseEvent.CLICK, onDismiss);
+		}
+		private function onDismiss(e:MouseEvent):void {
+			removeDialog();
+			resetCount();
 		}
 		public function setService(service:RemotingService):void {
 			this.service = service;
@@ -127,8 +125,8 @@
 		}
 		public function loadQuestion():void {
 			if (this.questionCount < 5) {
-			increaseCount();
-			this.service.choose_answer_bonus_question_activity(new Array(playSessionID, "Survey"), onGetBonusQuestion, onFail);
+				increaseCount();
+				this.service.choose_answer_bonus_question_activity(new Array(playSessionID, "Survey"), onGetBonusQuestion, onFail);
 			}
 			else {
 				this.showDialog();
@@ -238,7 +236,10 @@ private var questionSoundChannel:SoundChannel;
 			//removeDialog();
 			trace("answer copmplete");
 		}
-		
+		public function resetCount() {
+			this.questionCount = 0;
+			this.errorDialog.visible = false;
+		}
 		public function setQuestionCategory(questionCategory:GlymetrixQuestionCategory):void {
 trace("Questio cat " + questionCategory);
 					//this.sessionActivityId = re.result.SessionActivityID as int;

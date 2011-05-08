@@ -376,6 +376,7 @@ var surveyDialog:SurveyDialog;
 				}
 				
 private function onSurveyComplete(e:Event):void {
+	survey.alpha = .2;
 	                                myPoints += 500;
                                 myPoints_txt.text = String(myPoints);
                                 trace("Right!" + currentQuestion.points + "," + myPoints + "," + myPoints_txt.text);
@@ -393,7 +394,9 @@ private function onSurveyComplete(e:Event):void {
                 function beginGame() {
                         gotoAndStop("beginGame");
 
-								
+						if (surveyDialog != null)
+						surveyDialog.resetCount();
+						survey.alpha = 1;
                         startHelp_mc.visible = false;
                         trace("Beginning game!");
                         var fontSize = 24;
