@@ -50,6 +50,7 @@
 			this.dismissButton.addEventListener(MouseEvent.CLICK, onDismiss);
 		}
 		private function onDismiss(e:MouseEvent):void {
+			dispatchEvent(new DialogEvent(DialogEvent.DIALOG_DISMISS));
 			removeDialog();
 			resetCount();
 		}
