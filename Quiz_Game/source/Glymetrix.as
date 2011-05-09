@@ -419,7 +419,7 @@ private function onSurveyComplete(e:Event):void {
 								fontSize = 24;
                                 format.size = fontSize;
                                 format.bold = true;
-                               
+                               	format.kerning = false;
                                 format.align = "center";
                                 
 								
