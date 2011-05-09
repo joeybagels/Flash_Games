@@ -12,7 +12,7 @@
 	import flash.media.SoundChannel;
 	import flash.net.*;
 	import flash.text.TextField;
-	
+	import com.zerog.events.DialogEvent;
 	import org.rubyamf.remoting.ssr.*;
 
 
