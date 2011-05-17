@@ -3,9 +3,9 @@
   url_base = "#{request.relative_url_root}/quiz-game/core/"
   movie = url_base + 'quizgame.swf'
   flash_vars = @signon_params
-  flash_vars['rubyGateway'] = @gateway_url
-  flash_vars['data'] = "#{request.relative_url_root}/data/"
   flash_vars['gameName'] = @game.name
+  flash_vars['gateway1'] = @gateway_url
+  flash_vars['data'] = "#{request.relative_url_root}/data/"
   flash_vars.merge! @game.brandings
   flash_vars = flash_vars.to_query
 %>
