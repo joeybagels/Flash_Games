@@ -25,7 +25,7 @@
 		private var service:RemotingService;
 		public static const ANSWER:String = "answer";
 		public static const SURVEY_COMPLETE:String = "survey complete";
-		private static const SOUNDS_URL:String = "http://174.129.22.44/data/";
+		private var SOUNDS_URL:String = "http://174.129.22.44/data/";
 		public var question:TextField;
 		public var category:TextField;
 		//public var score:TextField;
@@ -38,17 +38,43 @@
 		public var loading:MovieClip;
 		private var selected:int;
 		
+		private var selectedAnswer:AnswerChoice;
+		
 		private var answers:Array;
 		private var q:GlymetrixQuestion;
 		private var start:Date;
 		private var playSessionID:int;
 		private var playSessionIDSubmit:int;
 		public var dismissButton:MovieClip;
-		public function SurveyDialog() {
+		
+		private var defaultTextColor:Number;
+		private var selectedTextColor:Number;
+		public var answerTextDialog:MovieClip;
+		private var answerSC:SoundChannel;
+		public function SurveyDialog(soundUrl:String = "http://174.129.22.44/data/", defaultTextColor:Number = 0x000000, selectedTextColor:Number = 0xffff00) {
 			super();
+			init(soundUrl, defaultTextColor, selectedTextColor);
 			this.errorDialog.visible = false;
+			this.answerTextDialog.visible = false;
+			this.answerTextDialog.closeButton.addEventListener(MouseEvent.CLICK, onAnswerTextDialogClose);
 			this.dismissButton.addEventListener(MouseEvent.CLICK, onDismiss);
+			
 		}
+		
+		public function init(soundUrl:String, defaultTextColor:Number, selectedTextColor:Number):void {
+			SOUNDS_URL = soundUrl;
+			this.defaultTextColor = defaultTextColor;
+			this.selectedTextColor = selectedTextColor;
+		}
+		
+		private function onAnswerTextDialogClose(e:MouseEvent):void {
+			this.answerTextDialog.visible = false;
+			this.answerTextDialog.answerText.text = "";
+			onAnswerSoundComplete(null);
+			
+			if (answerSC != null) answerSC.stop();
+		}
+		
 		private function onDismiss(e:MouseEvent):void {
 			dispatchEvent(new DialogEvent(DialogEvent.DIALOG_DISMISS));
 			removeDialog();
@@ -109,9 +135,9 @@
 		}
 
 		private function resetAnswers():void {
-			this.answer1.textColor = 0x000000;
-			this.answer2.textColor = 0x000000;
-			this.answer3.textColor = 0x000000;
+			this.answer1.textColor = this.defaultTextColor;
+			this.answer2.textColor = this.defaultTextColor;
+			this.answer3.textColor = this.defaultTextColor;
 		}
 		private function increaseCount():void {
 			this.questionCount++;
@@ -148,26 +174,36 @@
 				
 		private function selectAnswer(i:int):void {
 			resetAnswers();
-			var sc:SoundChannel;
+			
+			
+			this.selectedAnswer = this.answers[i-1];
+			
+			//if (this.selectedAnswer.getChosenContent() != null) {
+				trace("CHOSE CONETNT " + this.selectedAnswer.getChosenContent());
+				
+
+			//}
+			
 			
 			try {
 				switch (i) {
 					case 1:
 					trace("ANSWER ONE");
-					this.answer1.textColor = 0xffff00;
-					sc = this.answer1Sound.play();
+					this.answer1.textColor = this.selectedTextColor;
+					answerSC = this.answer1Sound.play();
 	
 					break;
 					
 					case 2:
-					this.answer2.textColor = 0xffff00;
-					sc = this.answer2Sound.play();
+					this.answer2.textColor = this.selectedTextColor;
+					answerSC = this.answer2Sound.play();
 	
 					break;
 					
 					case 3:
-					this.answer3.textColor = 0xffff00;
-					sc = this.answer3Sound.play();
+					this.answer3.textColor = this.selectedTextColor;
+					trace("ANSWER 3 PLAY");
+					answerSC = this.answer3Sound.play();
 	
 					break;
 				}
@@ -175,30 +211,30 @@
 					this.questionSoundChannel.stop();
 				}
 				
-				sc.addEventListener(Event.SOUND_COMPLETE, onAnswerSoundComplete);
+				answerSC.addEventListener(Event.SOUND_COMPLETE, onAnswerSoundComplete);
 			}
 			catch(e) {
 				trace("HERE");
-				onAnswerSoundComplete(null);
+				//onAnswerSoundComplete(null);
+			if (this.selectedAnswer.getChosenContent() != null) {
+				this.answerTextDialog.answerText.text = this.selectedAnswer.getChosenContent();
+			}
+			this.answerTextDialog.visible = true;
+				
+				
 			}
 			
 			
-			//decrement to 0 based
-			i--;
 			
+			
+			/*
 			if (this.answers[i] == undefined) {
 				onSubmitAnswer();
 			}
 			else {
-						this.service.submit_question_choice(new Array(
-                                {ChoiceSelectedID: this.answers[i].getId(),
-                                 EnterQuestionTime: this.start.toUTCString(),
-                                 EndQuestionTime: (new Date()).toUTCString(),
-                                 EarnedScore: getQuestion().getScore(),
-                                 AnsweredCorrectly: this.answers[i].isAnswer()},
-                                 this.playSessionIDSubmit , getQuestion().getId()), onSubmitAnswer, onSubmitAnswer);
+
 			
-			}
+			}*/
 			
 		}
 		
@@ -235,7 +271,14 @@ private var questionSoundChannel:SoundChannel;
 		
 		private function onAnswerSoundComplete(e:Event):void {
 			//removeDialog();
-			trace("answer copmplete");
+			trace("answer sound copmplete");
+						this.service.submit_question_choice(new Array(
+                                {ChoiceSelectedID: this.selectedAnswer.getId(),
+                                 EnterQuestionTime: this.start.toUTCString(),
+                                 EndQuestionTime: (new Date()).toUTCString(),
+                                 EarnedScore: getQuestion().getScore(),
+                                 AnsweredCorrectly: this.selectedAnswer.isAnswer()},
+                                 this.playSessionIDSubmit , getQuestion().getId()), onSubmitAnswer, onSubmitAnswer);
 		}
 		public function resetCount() {
 			this.questionCount = 0;

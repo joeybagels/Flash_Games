@@ -14,11 +14,13 @@
         import flash.utils.*;
 		import com.glymetrix.data.*;
 		import com.glymetrix.modules.survey.SurveyDialog;
-		
+		import com.zerog.events.DialogEvent;
         public class Glymetrix extends MovieClip {
 var surveyDialog:SurveyDialog;
+var answerTextDialog:AnswerTextDialog;
                 public static var firstQuestion = true;
-                var playSessionID;
+var answerChannel:SoundChannel;
+var playSessionID;
                 var sessionActivityID;
                 var currentQEvent:trackEvent;
                 var tracking = true;
@@ -61,7 +63,9 @@ var surveyDialog:SurveyDialog;
 				
                 function Glymetrix():void {
 					
-		
+					this.answerTextDialog = new AnswerTextDialog();
+					this.answerTextDialog.setParent(this);
+					this.answerTextDialog.addEventListener(DialogEvent.DIALOG_DISMISS, onAnswerTextDismiss);
 					questionImage = new QuestionImage();
 
 					questionImage.hideButton.addEventListener(MouseEvent.CLICK, onHideImage);
@@ -125,7 +129,12 @@ var surveyDialog:SurveyDialog;
 						
 						
                 }
-				
+				function onAnswerTextDismiss(e) {
+					if (answerChannel != null)
+						answerChannel.stop();
+					
+					answerComplete(null);
+				}
 				function onAnswerBonusQuestion(e:Event):void {
 					trace("answer bonus");
 				}
@@ -135,6 +144,8 @@ var surveyDialog:SurveyDialog;
                         traceRecurse(re.result);
 
                 }
+				override public function get width():Number { return 800; }
+				override public function get height():Number { return 600; }
                 function traceRecurse(o) {
                         var originalTRL = Glymetrix.traceRecurseLog;
                         var count = 0;
@@ -360,7 +371,7 @@ var surveyDialog:SurveyDialog;
 				
 				function loadSurvey() {
 					if (this.surveyDialog == null) {
-						this.surveyDialog = new SurveyDialog();
+						this.surveyDialog = new SurveyDialog(soundFolder);
 						trace("ON GET BONUS QUESTION " + this);
 						this.surveyDialog.setParent(this);
 						this.surveyDialog.setService(this.service)
@@ -567,7 +578,7 @@ function showRewards(evt:MouseEvent) {
 								
 								
 
-                        lock+=4;
+                        
 
 
                         // Debug Sound
@@ -593,35 +604,65 @@ function showRewards(evt:MouseEvent) {
 								
                         loadImage(soundFolder + imageNum + "i.jpg");
 						
-                        
-                        var soundNum = (currentQuestion.question.QuizQuestionID);
-
-                        var qURL = new URLRequest(soundFolder + question.QuizQuestionID + "q.mp3");
-                        var a1URL = new URLRequest(soundFolder + question.Choices[0].ChoiceID + "a.mp3");
-                        var a2URL = new URLRequest(soundFolder + question.Choices[1].ChoiceID + "a.mp3");
-                        var a3URL = new URLRequest(soundFolder + question.Choices[2].ChoiceID + "a.mp3");
-                        currentQuestion.qSound = new Sound(qURL);
-                        currentQuestion.a1Sound = new Sound(a1URL);
-                        currentQuestion.a2Sound = new Sound(a2URL);
-                        currentQuestion.a3Sound = new Sound(a3URL);
-						trace("a34 url " + soundFolder + question.Choices[2].ChoiceID + "a.mp3");
-                        currentQuestion.a1Sound.addEventListener(Event.COMPLETE, soundLoadComplete);
-                        currentQuestion.a1Sound.addEventListener(IOErrorEvent.IO_ERROR, function () {
-                                soundCheck(currentQuestion.a1Sound, a1URL);
-                        });
-
-                        currentQuestion.a2Sound.addEventListener(Event.COMPLETE, soundLoadComplete);
-                        currentQuestion.a2Sound.addEventListener(IOErrorEvent.IO_ERROR, function () {
-                                soundCheck(currentQuestion.a2Sound, a2URL);
-                        });
-                        currentQuestion.a3Sound.addEventListener(Event.COMPLETE, soundLoadComplete);
-                currentQuestion.a3Sound.addEventListener(IOErrorEvent.IO_ERROR, function () {
-                                soundCheck(currentQuestion.a3Sound, a3URL);
-                        });
-                        currentQuestion.qSound.addEventListener(Event.COMPLETE, soundLoadComplete);
-                        currentQuestion.qSound.addEventListener(IOErrorEvent.IO_ERROR, function () {
-                                soundCheck(currentQuestion.qSound, qURL);
-                        });
+                       // var qURL =  qURL = new URLRequest(soundFolder + question.QuizQuestionID + "q.mp3");
+						//currentQuestion.question.Choices[answerNum-1]
+						//if (currentQuestion.question.Choices[0].ChosenContent == undefined) {
+							var soundNum = (currentQuestion.question.QuizQuestionID);
+	
+							var qURL = new URLRequest(soundFolder + question.QuizQuestionID + "q.mp3");
+							var a1URL = new URLRequest(soundFolder + question.Choices[0].ChoiceID + "a.mp3");
+							var a2URL = new URLRequest(soundFolder + question.Choices[1].ChoiceID + "a.mp3");
+							var a3URL = new URLRequest(soundFolder + question.Choices[2].ChoiceID + "a.mp3");
+							currentQuestion.qSound = new Sound(qURL);
+							currentQuestion.a1Sound = new Sound(a1URL);
+							currentQuestion.a2Sound = new Sound(a2URL);
+							currentQuestion.a3Sound = new Sound(a3URL);
+							trace("a34 url " + soundFolder + question.Choices[2].ChoiceID + "a.mp3");
+							
+							//if (currentQuestion.question.Choices[0].ChosenContent == undefined) {
+								currentQuestion.a1Sound.addEventListener(Event.COMPLETE, soundLoadComplete);
+								currentQuestion.a1Sound.addEventListener(IOErrorEvent.IO_ERROR, function () {
+										soundCheck(currentQuestion.a1Sound, a1URL);
+								});
+								
+								lock++;
+							//}
+							
+							//if (currentQuestion.question.Choices[1].ChosenContent == undefined) {
+								currentQuestion.a2Sound.addEventListener(Event.COMPLETE, soundLoadComplete);
+								currentQuestion.a2Sound.addEventListener(IOErrorEvent.IO_ERROR, function () {
+										soundCheck(currentQuestion.a2Sound, a2URL);
+								});
+								lock++;
+							//}
+							
+							//if (currentQuestion.question.Choices[2].ChosenContent == undefined) {
+								currentQuestion.a3Sound.addEventListener(Event.COMPLETE, soundLoadComplete);
+						currentQuestion.a3Sound.addEventListener(IOErrorEvent.IO_ERROR, function () {
+										soundCheck(currentQuestion.a3Sound, a3URL);
+								});
+								lock++;
+							//}
+							
+							
+								currentQuestion.qSound.addEventListener(Event.COMPLETE, soundLoadComplete);
+								currentQuestion.qSound.addEventListener(IOErrorEvent.IO_ERROR, function () {
+										soundCheck(currentQuestion.qSound, qURL);
+								});
+								lock++
+						
+						//}
+						//else {
+							//this.lock = 1;
+							
+							///currentQuestion.qSound = new Sound(qURL);
+							//currentQuestion.qSound.addEventListener(Event.COMPLETE, soundLoadComplete);
+							//currentQuestion.qSound.addEventListener(IOErrorEvent.IO_ERROR, function () {
+									//soundCheck(currentQuestion.qSound, qURL);
+							//});
+							//soundLoadComplete(null);
+							//trace("CHOSENT CONENT"  + currentQuestion.question.Choices[0].ChosenContent)
+						//}
                 }
 				
 				
@@ -657,28 +698,46 @@ function showRewards(evt:MouseEvent) {
                         trace("BALLS");
                 }
 
+
                 function answer1(e:MouseEvent) {
 						
                         answerQuestion(1);
-                        if (currentQuestion.a1Sound.bytesLoaded > 0) {
-                        var channel = currentQuestion.a1Sound.play();
-                        channel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
-                        } else {
-                                answerComplete(null);
-                        }
+						
+                        //if (currentQuestion.question.Choices[0].ChosenContent == undefined) {
+							if (currentQuestion.a1Sound.bytesLoaded > 0) {
+                        		answerChannel = currentQuestion.a1Sound.play();
+                        		answerChannel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
+							}
+							else {
+							//else {
+								//answerComplete(null);
+							//}
+                       // } else {
+								trace("ANSWER NULL " + currentQuestion.question.Choices[0].ChosenContent);
+                                //answerComplete(null);
+								this.answerTextDialog.setAnswerText(currentQuestion.question.Choices[0].ChosenContent, currentQuestion.question.Choices[0].IsAnswer);
+								this.answerTextDialog.showDialogAt(166.025, 114.5);
+					   		}
+                        //}
                 }
 
                 function answer2(e:MouseEvent) {
 
                         answerQuestion(2);
 						
-						try {
-                       	 var channel = currentQuestion.a2Sound.play();
-						 channel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
+ 					//if (currentQuestion.question.Choices[1].ChosenContent == undefined) {
+						if (currentQuestion.a2Sound.bytesLoaded > 0) {
+                       	 answerChannel = currentQuestion.a2Sound.play();
+						 answerChannel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
 						}
-						catch(e:Error) {
-							answerComplete(null);
-						}
+						//else {
+							//answerComplete(null);
+						//}
+					//}
+					else {
+								this.answerTextDialog.setAnswerText(currentQuestion.question.Choices[1].ChosenContent, currentQuestion.question.Choices[1].IsAnswer);
+								this.answerTextDialog.showDialogAt(166.025, 114.5);
+					}
                         
                 }
 function restart(e) {
@@ -688,12 +747,18 @@ begin(null);
                 function answer3(e:MouseEvent) {
 
                         answerQuestion(3);
-						try {
-                       	 var channel = currentQuestion.a3Sound.play();
-						 channel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
-						}
-						catch(e:Error) {
-							answerComplete(null);
+						//if (currentQuestion.question.Choices[2].ChosenContent == undefined) {
+							if (currentQuestion.a3Sound.bytesLoaded > 0) {
+								 answerChannel = currentQuestion.a3Sound.play();
+								answerChannel.addEventListener(Event.SOUND_COMPLETE, answerComplete);
+							}
+							//else {
+								//answerComplete(null);
+							//}
+						//}
+						else {
+								this.answerTextDialog.setAnswerText(currentQuestion.question.Choices[2].ChosenContent, currentQuestion.question.Choices[2].IsAnswer);
+								this.answerTextDialog.showDialogAt(166.025, 114.5);
 						}
                 }
 
@@ -806,7 +871,8 @@ begin(null);
                         this.lock -= 1;
                         if (lock == 0) {
                                 gotoAndStop("askQuestion");
-// start
+// star
+trace("GOT HERE IN SOUND LOAD COM");
         var question = currentQuestion.question;
                         trace("rlq3");
                         trace ("currentFrame: " + currentLabel);
