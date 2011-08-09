@@ -9,6 +9,7 @@ package com.marvel.superherosquad.solitaire
 	import as3cards.visual.VisualCard;
 	import as3cards.visual.VisualDeck;
 	
+	import com.glymetrix.modules.survey.SurveyDialog;
 	import com.zerog.components.buttons.AbstractButton;
 	import com.zerog.components.buttons.ButtonEvent;
 	import com.zerog.components.dialogs.*;
@@ -28,6 +29,7 @@ package com.marvel.superherosquad.solitaire
 	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
+	import flash.display.Loader;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
@@ -51,6 +53,7 @@ package com.marvel.superherosquad.solitaire
 	
 	public class Game extends KlondikeGame 
 	{
+		private var surveyButton:MovieClip;
 		private var pointsMultiplier:Number = 1;
 		private var bonusHintDialog:BonusHintDialog;
 		private var disableAddFoundationSound:Boolean;
@@ -63,7 +66,7 @@ package com.marvel.superherosquad.solitaire
 		public static const GLUCOSE_MONITORING_CAT:int = 12;
 		public static const MED_COMPLIANCE_CAT:int = 11;
 		
-		private static const SOUNDS_URL:String = "http://174.129.22.44/data/";
+		private var SOUNDS_URL:String;
 		
 		private var questionSoundChannel:SoundChannel;
 		private var questionSound:Sound;
@@ -90,10 +93,10 @@ package com.marvel.superherosquad.solitaire
 		private var wolverine:IBonusCard;
 		
 		private var creditsButton:AbstractButton;
-		private var creditsPage:AbstractDialog;
+		private var creditsPage:CreditsPage;
 		private var autoCompleteDialog:AbstractDialog;
 		private var questionDialog:QuestionDialog;
-		
+		private var surveyDialog:SurveyDialog;
 		private var empty:Sprite;
 		
 		private var kingSpadesBurn:MovieClip;
@@ -121,8 +124,9 @@ package com.marvel.superherosquad.solitaire
 		[Embed(source="../../../../../artwork/board/captain-america-star-blue.png")]
 		private var CaptainAmericaStarBlue:Class;
 		private var captainAmericaStarBlue:BitmapAsset = new CaptainAmericaStarBlue();
-		
+
 		[Embed(source="../../../../../bin-debug/com/marvel/superherosquad/solitaire/Assets.swf#Loading")]
+		//[Embed(source="../../../../../artwork/Assets.swf#Loading")]
  		private var PreloadDisplay:Class;
  		private var preloadDisplay:Sprite = new PreloadDisplay();
 
@@ -131,7 +135,7 @@ package com.marvel.superherosquad.solitaire
 		private var logo:BitmapAsset = new Logo();
 
  		private var preloadDialog:LoadingDisplay;
- 		
+
 		//[Embed(source="../../../../../artwork/board/wolverine-scratch-small.png")]
 		//private var WolverineScratch:Class;
 		//private var wolverineScratch:BitmapAsset = new WolverineScratch();
@@ -178,7 +182,7 @@ package com.marvel.superherosquad.solitaire
 		private var deckCycles:uint = 0;
 		
 		private var timer:Timer;
-		
+		private var answerSC:SoundChannel;
 		//bonus card locations
 		private var ironManLocation:uint;
 		private var hulkLocation:uint;
@@ -198,13 +202,13 @@ package com.marvel.superherosquad.solitaire
 		
 		private var lastBonusCardClicked:IBonusCard;
 		
-		public function Game(assetsUrl:String)
+		public function Game(assetsUrl:String, data:String)
 		{
 			super(this.bg);
 
 			this.disableAddFoundationSound = false;
             
-       
+       		SOUNDS_URL = data;
 			
 			this.empty = new Sprite();
 
@@ -296,6 +300,7 @@ package com.marvel.superherosquad.solitaire
 				//if not one of the ones below
 				//except for the case of the options menu and heroes page and effects
 				if (
+					(dObject as SurveyDialog != this.surveyDialog) &&
 					(dObject as LinearList != this.list) && 
 					//(dObject as AbstractButton != this.undo) &&
 					(dObject as MovieClip != this.scoreArea) &&
@@ -789,7 +794,8 @@ package com.marvel.superherosquad.solitaire
 		
 
 		override public function newGame(bg:DisplayObject = null):void {
-			
+			this.surveyDialog.resetCount();
+			this.surveyButton.visible = true;
 			gameOverFlag = false;
 
 			this.sounds.stopSplash();
@@ -1028,7 +1034,8 @@ package com.marvel.superherosquad.solitaire
 			if (soundsEnabled()) {
 				this.sounds.turnTableau();
 			}
-			
+		
+		trace("D");	
 			var card:VisualCard = super.turnOver(event);
 			
 			addToScore(5);
@@ -1177,7 +1184,7 @@ package com.marvel.superherosquad.solitaire
 		
 		private function getBonusCard(vc:VisualCard):void {
 			
-	/*
+	
 			
  			if (!this.list.containsItem(this.thor)) {
 			this.list.addItem(this.thor);	
@@ -1221,13 +1228,13 @@ package com.marvel.superherosquad.solitaire
 				this.msMarvel.increment();
 				this.msMarvel.increment();
 				this.msMarvel.increment();
-				
+
 									if (soundsEnabled()) {
 						this.sounds.bonusCard();
 					}	
 				
 				return; 
-		*/
+		
 				var bonusCard:IBonusCard = getNonListedBonusCard();
 						
 						
@@ -1487,27 +1494,31 @@ package com.marvel.superherosquad.solitaire
 		private function onAnswerQuestion(e:AbstractDataEvent):void {
 			this.questionSoundChannel.stop();
 			var answer:AnswerChoice = e.getObject() as AnswerChoice;
-			var sc:SoundChannel;
 			
-			switch(answer.getSelection()) {
-				case 1:
+			
+			try {
+				switch(answer.getSelection()) {
+					case 1:
+					
+					answerSC = this.answer1Sound.play();
+					
+					break;
+					
+					case 2:
+					answerSC = this.answer2Sound.play();
+					break;
+					
+					case 3:
+					answerSC = this.answer3Sound.play();
+					break;
+					
+				}
 				
-				sc = this.answer1Sound.play();
-				sc.addEventListener(Event.SOUND_COMPLETE, onAnswerSoundComplete);
-				
-				break;
-				
-				case 2:
-				sc = this.answer2Sound.play();
-				break;
-				
-				case 3:
-				sc = this.answer3Sound.play();
-				break;
-				
+				answerSC.addEventListener(Event.SOUND_COMPLETE, onAnswerSoundComplete);
 			}
-			
-			sc.addEventListener(Event.SOUND_COMPLETE, onAnswerSoundComplete);
+			catch(e) {
+				this.questionDialog.showAnswerText(answer.getChosenContent());
+			}
 			
 			this.server.submitAnswer(answer.getId(), this.questionDialog.getStart(),this.questionDialog.getQuestion().getScore() ,answer.isAnswer(),this.questionDialog.getQuestion().getId());
 		}
@@ -1554,17 +1565,35 @@ package com.marvel.superherosquad.solitaire
 			
 			this.server.submitGlucose(healthRecords);
 		}
+		
+		private function onSurveyComplete(e:Event):void {
+			this.surveyButton.visible = false;
+			addToScore(500);
+		}
+		private function onCloseAnswerDialog(e:AbstractDataEvent):void {
+			if (this.answerSC != null) {
+				this.answerSC.stop();
+			}
+			onAnswerSoundComplete(null);
+		}
 		private function handleAssets():void {
 			
 			var mySo:SharedObject = SharedObject.getLocal(MARVEL_SUPERHERO_SQUAD_SOLITAIRE_NAME);
 			
-			
+			if (this.surveyDialog == null) {
+				this.surveyDialog = a.getMovieClip("surveyDialog") as SurveyDialog;
+				this.surveyDialog.setParent(this);
+				this.surveyDialog.setService(this.server.myService);
+				this.surveyDialog.init(SOUNDS_URL, 0x3B2314, 0x3B2314);
+				this.surveyDialog.addEventListener(SurveyDialog.SURVEY_COMPLETE, onSurveyComplete);
+			}
+
 			if (this.doubleDialog == null) {
 				this.doubleDialog = a.getMovieClip("doubleYourPointsDialog") as DoubleYourPointsDialog;
 				this.doubleDialog.addEventListener(DialogEvent.DIALOG_CONFIRM, onDouble);
 				this.doubleDialog.setParent(this);	
 			}
-			
+
 			if (this.doubleEntryDialog == null) {
 				this.doubleEntryDialog = a.getMovieClip("doubleYourPointsEntryDialog") as DoubleYourPointsEntryDialog;
 				this.doubleEntryDialog.addEventListener(DialogEvent.DIALOG_CONFIRM, onDoubleEntry);
@@ -1600,6 +1629,7 @@ package com.marvel.superherosquad.solitaire
 				this.questionDialog = a.getMovieClip("questionDialog") as QuestionDialog;
 				this.questionDialog.addEventListener(DialogEvent.DIALOG_DISMISS, removeQuestionDialog);
 				this.questionDialog.addEventListener(QuestionDialog.ANSWER, onAnswerQuestion);
+				this.questionDialog.addEventListener(QuestionDialog.CLOSE_ANSWER_DIALOG, onCloseAnswerDialog);
 				
 				this.questionDialog.setParent(this);
 			}
@@ -1694,7 +1724,12 @@ package com.marvel.superherosquad.solitaire
 					
 					this.undo.enabled = false;
 					this.undo.addEventListener(MouseEvent.CLICK, onUndo);
-				}	
+				}
+				
+				
+				this.surveyButton = this.bb.getChildByName("surveyButton") as MovieClip;
+				this.surveyButton.visible = false;
+				this.surveyButton.addEventListener(MouseEvent.CLICK, onSurveyButtonClick);	
 			}
 			
 			//last minute hack
@@ -1704,6 +1739,7 @@ package com.marvel.superherosquad.solitaire
 					
 			if (this.tb == null) {
 				this.tb = a.getMovieClip("topBar");
+				this.tb.branded.visible = false;
 				this.tb.y = 0;
 				this.tb.x = 16;
 				
@@ -1725,12 +1761,19 @@ package com.marvel.superherosquad.solitaire
 				this.creditsButton.x = 731;
 				this.creditsButton.y = 598;
 				this.creditsButton.addEventListener(MouseEvent.CLICK, onCreditsClick);
+				
+				
 				addChild(this.creditsButton);
 			}
 			
 			if (this.creditsPage == null) {
-				this.creditsPage = a.getMovieClip("creditsPage") as AbstractDialog;
+				this.creditsPage = a.getMovieClip("creditsPage") as CreditsPage;
 				this.creditsPage.setParent(this);
+				trace(this.root.loaderInfo.parameters.creditsBrand);
+				if (this.root.loaderInfo.parameters.creditBrand != undefined) {
+					this.creditsPage.brand(this.root.loaderInfo.parameters.creditBrand,this.root.loaderInfo.parameters.creditBrandX,this.root.loaderInfo.parameters.creditBrandY);
+				}
+				
 				this.creditsPage.addEventListener(MouseEvent.CLICK, onClickCredits);
 			}
 			
@@ -1874,6 +1917,15 @@ package com.marvel.superherosquad.solitaire
 			updateScoreDisplay();
 			updateBestScoreDisplay();
 			
+			if (this.root.loaderInfo.parameters.topBarBrand != undefined) {
+				var l2:Loader = new Loader();
+				l2.x = this.root.loaderInfo.parameters.topBarBrandX;
+				l2.y = this.root.loaderInfo.parameters.topBarBrandY;
+				l2.load(new URLRequest(this.root.loaderInfo.parameters.topBarBrand));
+				addChild(l2);
+				
+			}
+				
 			if (!this.server.isLoggedIn()) {
 				if (soundsEnabled()) {
 					this.sounds.splash();
@@ -1883,12 +1935,17 @@ package com.marvel.superherosquad.solitaire
 					this.server.queryTermsOfService();
 				}
 				
-	/*
+	
 				//if the username and hash are set
-				//if (this.root.loaderInfo.parameters.username != undefined && this.root.loaderInfo.parameters.hash != undefined) {
-				if (this.root.loaderInfo.parameters.login == "auto") {
+				if (this.root.loaderInfo.parameters.username == undefined && this.root.loaderInfo.parameters.hash == undefined) {
+					this.server.login("zerog", "746d4b622637292b26fc7a778dd744c8015ac008");
+				}
+				else if (this.root.loaderInfo.parameters.username != undefined && this.root.loaderInfo.parameters.hash != undefined) {
+					//if (this.root.loaderInfo.parameters.login == "auto") {
 					this.server.login(this.root.loaderInfo.parameters.username, this.root.loaderInfo.parameters.hash);
 				}
+				
+				/*
 				//else {
 				else if (this.root.loaderInfo.parameters.login == "prompt") {
 					this.loginDialog.showDialog(0,0);
@@ -1896,6 +1953,7 @@ package com.marvel.superherosquad.solitaire
 				else if (this.root.loaderInfo.parameters.login == "skip") {
 					this.server.queryTermsOfService();
 				}*/
+			//	this.loginDialog.showDialog(0,0);
 			}
 		}
 
@@ -3932,7 +3990,11 @@ package com.marvel.superherosquad.solitaire
 			//this.server.queryQuestions();
 			dealCards();
 		}
-		
+		private function onSurveyButtonClick(e:MouseEvent):void {
+			trace(this.server.getPlaySessionId());
+			this.surveyDialog.setSessionId(this.server.getPlaySessionId());
+			this.surveyDialog.loadQuestion();
+		}
 		private function onRegister(e:Event):void {
 			this.loginDialog.removeSignUp();
 			//this.loginDialog.removeDialog();

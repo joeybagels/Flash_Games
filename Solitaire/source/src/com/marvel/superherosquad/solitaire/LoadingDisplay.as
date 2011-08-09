@@ -4,6 +4,7 @@ package com.marvel.superherosquad.solitaire
 	import com.zerog.events.StreamEvent;
 	import com.zerog.utils.load.ILoadStream;
 	
+	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.text.TextField;
@@ -13,11 +14,15 @@ package com.marvel.superherosquad.solitaire
 		public var colorLogo:MovieClip;
 		public var blocker:MovieClip;
 		public var status:TextField;
+		//public var banner:TextField;
 		
 		public function LoadingDisplay()
 		{
 			super();
+			//this.banner.visible = false;
 		}
+		
+		
 		
 		override protected function onStatus(e:StreamEvent):void {
 			var ls:ILoadStream = e.getStream();
@@ -31,6 +36,10 @@ package com.marvel.superherosquad.solitaire
 			this.status = s.getChildByName("status") as TextField;
 			this.colorLogo.mask = this.blocker;
 			addChild(s);
+		}
+		
+		public function addBrand(d:DisplayObject):void {
+			addChild(d);
 		}
 		
 		public function setPercent(percent:Number):void {

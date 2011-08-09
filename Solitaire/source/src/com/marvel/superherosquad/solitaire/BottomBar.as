@@ -14,6 +14,7 @@ package com.marvel.superherosquad.solitaire
 		public var moreGames:BasicButton;
 		public var undo:BasicButton;
 		public var prizes:BasicButton;
+		public var surveyButton:MovieClip;
 		
 		public function BottomBar()
 		{

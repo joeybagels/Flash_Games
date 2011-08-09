@@ -1,5 +1,6 @@
 ﻿package com.marvel.superherosquad.solitaire
 {
+	import com.glymetrix.modules.survey.SurveyDialog;
 	import com.zerog.components.buttons.AbstractButton;
 	import com.zerog.components.buttons.BasicButton;
 	import com.zerog.components.dialogs.AbstractDialog;
@@ -9,6 +10,7 @@
 	
 	public class Assets extends MovieClip implements IAssets
 	{
+		public var surveyDialog:SurveyDialog;
 		public var doubleYourPointsDialog:DoubleYourPointsDialog;
 		public var doubleYourPointsEntryDialog:DoubleYourPointsEntryDialog;
 		public var bonusHintDialog:BonusHintDialog;
@@ -55,6 +57,9 @@
 		public function Assets()
 		{
 			super();
+		}
+		public function getSurveyDialog():SurveyDialog {
+			return this.surveyDialog;
 		}
 		public function getGoldCards():IGoldCard {
 			return this.goldCards;

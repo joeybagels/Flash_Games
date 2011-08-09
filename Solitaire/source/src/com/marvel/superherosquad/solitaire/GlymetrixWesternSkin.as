@@ -25,7 +25,7 @@ package com.marvel.superherosquad.solitaire
 	[Embed(source="../../../../../artwork/board/king-slot.swf")]
 	private var EmptyKingPile:Class;
 
-	[Embed(source="../../../../../artwork/board/draw-deck-slot.png")]
+	[Embed(source="../../../../../artwork/cards/backcard.png")]
 	private var Deck:Class;
 	
 	[Embed(source="../../../../../artwork/board/draw-deck-slot-empty.png")]

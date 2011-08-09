@@ -14,7 +14,7 @@ package com.marvel.superherosquad.solitaire
 	public class DatabaseAPI extends EventDispatcher
 	{
 		private var username:String;
-		private var myService:RemotingService;
+		public var myService:RemotingService;
 		private var loggedIn:Boolean;
 		private var playSessionId:int;
 		private var sessionActivityId:int;
@@ -43,7 +43,7 @@ package com.marvel.superherosquad.solitaire
 			
 			
 			if (parameters.gateway1 == undefined) {
-				gateway1 = "http://174.129.22.44/rubyamf_gateway"; 
+				gateway1 = "http://ec2-50-17-251-132.compute-1.amazonaws.com/rubyamf_gateway"; 
 			}
 			else {
 				gateway1 = parameters.gateway1;
@@ -138,7 +138,9 @@ package com.marvel.superherosquad.solitaire
                                  AnsweredCorrectly: correct},
                                  this.sessionActivityId , questionId), onSubmitAnswer, onFail);
 		}
-		
+		public function getPlaySessionId():int {
+			return this.playSessionId;
+		}
 		private function onSubmitAnswer(re:ResultEvent):void {
 			trace("on sub answer");
 		}

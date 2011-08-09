@@ -4,14 +4,16 @@ package com.marvel.superherosquad.solitaire
 	import com.zerog.events.AbstractDataEvent;
 	
 	import flash.display.MovieClip;
+	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 
 
 	public class QuestionDialog extends AbstractAlertDialog
 	{
-		public static const ANSWER:String = "answer";
 		
+		public static const ANSWER:String = "answer";
+		public static const CLOSE_ANSWER_DIALOG:String = "answer dialog close";
 		public var question:TextField;
 		public var category:TextField;
 		//public var score:TextField;
@@ -23,12 +25,26 @@ package com.marvel.superherosquad.solitaire
 		public var answer3Click:MovieClip;
 		public var loading:MovieClip;
 		private var selected:int;
-		
+		public var answerQuestionDialog:MovieClip;
 		public function QuestionDialog()
 		{
 			super();
 			
+			this.answerQuestionDialog.visible = false;
+			this.answerQuestionDialog.closeButton.addEventListener(MouseEvent.CLICK, onAnswerTextDialogClose);
 
+		}
+		
+		private function onAnswerTextDialogClose(e:MouseEvent):void {
+			this.answerQuestionDialog.visible = false;
+			this.answerQuestionDialog.answerText.text = "";
+			dispatchEvent(new AbstractDataEvent(CLOSE_ANSWER_DIALOG));
+		}
+		public function showAnswerText(s:String):void {
+			if (s!=null) {
+			this.answerQuestionDialog.answerText.text = s;
+			}
+			this.answerQuestionDialog.visible = true;
 		}
 		override public function showDialog(x:Number = Number.NaN, y:Number = Number.NaN):void {
 			super.showDialogAt(x, y, this.parentContainer.numChildren);
